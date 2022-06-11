@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Venta extends Migration
+class Factura extends Migration
 {
     /**
      * Run the migrations.
@@ -13,21 +13,15 @@ class Venta extends Migration
      */
     public function up()
     {
-        Schema::create('venta', function (Blueprint $table) {
+        Schema::create('factura', function (Blueprint $table) {
             $table->id();
-
-            $table->string('nit')->unique();
-            $table->unsignedBigInteger('ref_inve');
-            $table->unsignedBigInteger('cedula_c');
-            $table->unsignedBigInteger('cod_prod');
-            $table->integer('cantidad');
-            $table->float('valor_total');
-
-            $table->timestamps();
             
-            $table->foreign('ref_inve')->references('id')->on('inventario');
+            $table->date('fecha');
+            $table->float('valor_total');
+            $table->unsignedBigInteger('cedula_c');
+        
+            $table->timestamps();
             $table->foreign('cedula_c')->references('id')->on('cliente');
-            $table->foreign('cod_prod')->references('id')->on('producto');
         });
     }
 
@@ -38,6 +32,6 @@ class Venta extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('venta');
+        Schema::dropIfExists('factura');
     }
 }
