@@ -45,7 +45,7 @@
         <input type="password" id= "password" name= "password">
 
         <label for="">Confirmar Contraseña:</label>
-        <input type="password" id= "password_valid" name= "password_valid">
+        <input type="password" id= "password_confirmation" name= "password_confirmation">
 
         <button>Registrarse</button>
     </form>
