@@ -15,7 +15,7 @@
         <input type="text" id= "nombre" name= "nombre">
 
         <label for="">Apellido:</label>
-        <input type="text" id= "nombre" name= "nombre">
+        <input type="text" id= "apellido" name= "apellido">
          
         <label for="">Cédula:</label>
         <input type="text" id= "cedula" name= "cedula">
