@@ -12,7 +12,14 @@ class RegisterController extends Controller
     }
 
     public function store(){
-        $user = User::create(request(['foto','nombre','apellido','cedula','correo','cargo','contraseña']));
+        $this->validate(request(),[
+            'name' => 'required',
+            'email' => 'required|email',
+            'password' => 'required|confirmed',
+        ]);
+
+
+        $user = User::create(request(['name','email','password']));
         auth()->login($user);
         return redirect()->to('/');
     }
