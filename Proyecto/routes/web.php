@@ -6,7 +6,6 @@ use App\Http\Controllers\SessionController;
 use App\Http\Controllers\AdminController;
 
 
-
 Route::get('/', function () {
     return view('home');
 })->middleware('auth');
