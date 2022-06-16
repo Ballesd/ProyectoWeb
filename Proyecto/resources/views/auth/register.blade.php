@@ -6,11 +6,11 @@
 
 <div>
     <h1>Register</h1>
-    <form action="" method = "POST">
+    <form action="" enctype = "multipart/form-data" method = "POST">
         @csrf
-
-        <label for="">Foto:</label>
-        <input type="file" id="foto" name="foto">
+        <label for="avatar">Foto:
+        <input type="file" id="photo" name="photo">
+        </label>
 
         <label for="">Nombre:</label>
         <input type="text" id= "name" name= "name">
@@ -33,8 +33,6 @@
           <select name="Cargo" id="Cargo" class="">
             <option value="Administrador">Administrador</option>
             <option value="Usuario">Usuario</option>
-            <option value="Cliente">Cliente</option>
-            <option value="Observador">Observador</option>
           </select>
         </div>
 
