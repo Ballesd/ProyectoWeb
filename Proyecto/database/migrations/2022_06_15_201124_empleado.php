@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Proveedor extends Migration
+class Empleado extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,18 @@ class Proveedor extends Migration
      */
     public function up()
     {
-        Schema::create('proveedor', function (Blueprint $table) {
+        Schema::create('empleado', function (Blueprint $table) {
             $table->id();
 
-            $table->string('cedula')->unique();
-            $table->unsignedBigInteger('ref_inve');
             $table->string('nombre');
+            $table->string('cedula');
             $table->string('apellido');
+            $table->date('fecha_ingreso');
+            $table->string('direccion');
             $table->string('telefono');
 
             $table->timestamps();
-            
-            $table->foreign('ref_inve')->references('id')->on('inventario');
+
         });
     }
 
@@ -35,6 +35,6 @@ class Proveedor extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('proveedor');
+        //
     }
 }

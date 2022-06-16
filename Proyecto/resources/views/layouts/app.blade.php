@@ -15,10 +15,22 @@
             </h1>
         </div>
         <ul>
-            <li>
-                <a href="{{ route('login.index')  }}">Ingresar</a>
-                <a href="{{ route('register.index')  }}">Registrarse</a>
-            </li>
+            @if(auth()->check())
+                <li>
+                    <p>BIENVENIDO <b>{{ auth()->user()->name }}</b></p>
+                </li>
+                <li>
+                    <a href="{{ route('login.destroy')  }}">Cerrar sesion</a>
+                    
+                </li>
+            @else
+                <li>
+                    <a href="{{ route('login.index')  }}">Ingresar</a>
+                </li>
+                <li>
+                    <a href="{{ route('register.index')  }}">Registrarse</a>
+                </li> 
+            @endif
         </ul>
     </nav>
 

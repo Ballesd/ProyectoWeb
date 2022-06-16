@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Cliente extends Migration
+class Proveedor extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,18 @@ class Cliente extends Migration
      */
     public function up()
     {
-        Schema::create('cliente', function (Blueprint $table) {
+        Schema::create('proveedor', function (Blueprint $table) {
             $table->id();
 
             $table->string('cedula')->unique();
             $table->string('nombre');
-            $table->string('ciudad');
-            
+            $table->string('apellido');
+            $table->string('telefono');
+            $table->unsignedBigInteger('id_comp');
+
             $table->timestamps();
+            
+            $table->foreign('id_comp')->references('id')->on('compañia');
         });
     }
 
@@ -31,6 +35,6 @@ class Cliente extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cliente');
+        //
     }
 }

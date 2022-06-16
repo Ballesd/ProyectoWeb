@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Despacho extends Migration
+class Produccion extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,15 @@ class Despacho extends Migration
      */
     public function up()
     {
-        Schema::create('despacho', function (Blueprint $table) {
+        Schema::create('produccion', function (Blueprint $table) {
             $table->id();
 
-            $table->string('salida');
-            $table->string('cantidad_salida');
-            $table->date('fecha_salida');
-            $table->unsignedBigInteger('ref_inve');
+            $table->integer('cantidad');
+            $table->time('horas_extra');
+            $table->unsignedBigInteger('id_empleado');
 
             $table->timestamps();
-            
-            $table->foreign('ref_inve')->references('id')->on('inventario');
+            $table->foreign('id_empleado')->references('id')->on('empleado');
 
         });
     }
@@ -35,6 +33,6 @@ class Despacho extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('despacho');
+        //
     }
 }

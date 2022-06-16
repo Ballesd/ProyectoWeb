@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Empleado extends Migration
+class Producto extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,18 @@ class Empleado extends Migration
      */
     public function up()
     {
-        Schema::create('empleado', function (Blueprint $table) {
+        Schema::create('producto', function (Blueprint $table) {
             $table->id();
 
-            $table->string('nombre');
-            $table->string('cedula');
-            $table->string('apellido');
-            $table->date('fecha_ingreso');
-            $table->string('direccion');
-            $table->string('telefono');
+            $table->string('cod_prod')->unique();
+            $table->string('descripcion');
+            $table->float('precio');
+            $table->integer('unidad');
+            $table->unsignedBigInteger('id_inv');
 
             $table->timestamps();
+            
+            $table->foreign('id_inv')->references('id')->on('compañia');
         });
     }
 
@@ -34,6 +35,6 @@ class Empleado extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('empleado');
+        //
     }
 }

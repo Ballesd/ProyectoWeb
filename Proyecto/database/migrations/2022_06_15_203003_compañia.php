@@ -16,13 +16,10 @@ class Compañia extends Migration
         Schema::create('compañia', function (Blueprint $table) {
             $table->id();
 
-            $table->unsignedBigInteger('cedula_prov');
             $table->string('nombre_empresa');
             $table->string('ciudad');
             
             $table->timestamps();
-
-            $table->foreign('cedula_prov')->references('id')->on('proveedor');
         });
     }
 
@@ -33,6 +30,6 @@ class Compañia extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('compañia');
+        //
     }
 }

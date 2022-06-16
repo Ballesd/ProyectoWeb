@@ -7,24 +7,29 @@
 <div>
     <h1>Register</h1>
     <form action="" method = "POST">
-    @csrf
+        @csrf
+
         <label for="">Foto:</label>
         <input type="file" id="foto" name="foto">
 
         <label for="">Nombre:</label>
-        <input type="text" id= "nombre" name= "nombre">
+        <input type="text" id= "name" name= "name">
+
 
         <label for="">Apellido:</label>
         <input type="text" id= "apellido" name= "apellido">
-         
+        
         <label for="">Cédula:</label>
         <input type="text" id= "cedula" name= "cedula">
-
+ 
+        @error('email')
+            <p>{{$message }}</p>
+        @enderror
         <label for="">Correo:</label>
-        <input type="email" id= "correo" name= "correo">
+        <input type="email" id= "email" name= "email">
 
         <div class="">
-          <label for="Cargo"><b>Cargo:</b></label>
+          <label for="Cargo"><b>Rol:</b></label>
           <select name="Cargo" id="Cargo" class="">
             <option value="Administrador">Administrador</option>
             <option value="Usuario">Usuario</option>
@@ -33,11 +38,14 @@
           </select>
         </div>
 
+        @error('password')
+            <p>{{$message }}</p>
+        @enderror
         <label for="">Contraseña:</label>
-        <input type="password" id= "contraseña" name= "contraseña">
+        <input type="password" id= "password" name= "password">
 
         <label for="">Confirmar Contraseña:</label>
-        <input type="password" id= "contraseña_valid" name= "contraseña_valid">
+        <input type="password" id= "password_confirmation" name= "password_confirmation">
 
         <button>Registrarse</button>
     </form>
