@@ -10,6 +10,9 @@ Route::get('/', function () {
     return view('home');
 })->middleware('auth');
 
+
+Route::resource('empleado', App\Http\Controllers\EmpleadoController::class);  
+
 Route::get('/register', [RegisterController::class, 'create'])
     ->middleware('guest') 
     ->name('register.index');
@@ -31,3 +34,4 @@ Route::get('/logout', [SessionController::class, 'destroy'])
 Route::get('/admin',[AdminController:: class, 'index'])
     ->middleware('auth.admin')
     ->name('admin.index');
+  
