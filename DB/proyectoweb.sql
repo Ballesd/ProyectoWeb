@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-06-2022 a las 03:13:27
+-- Tiempo de generación: 22-06-2022 a las 01:23:44
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -38,10 +38,10 @@ CREATE TABLE `compañia` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `empleado`
+-- Estructura de tabla para la tabla `empleados`
 --
 
-CREATE TABLE `empleado` (
+CREATE TABLE `empleados` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `nombre` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `cedula` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -52,6 +52,23 @@ CREATE TABLE `empleado` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `empleados`
+--
+
+INSERT INTO `empleados` (`id`, `nombre`, `cedula`, `apellido`, `fecha_ingreso`, `direccion`, `telefono`, `created_at`, `updated_at`) VALUES
+(1, 'edicion', '432', 'vdsc', '2022-06-08', 'vrevre', '87654', '2022-06-21 02:08:29', '2022-06-21 03:06:27'),
+(2, 'xxpers', 'rever', 'vdsc', '2022-06-08', 'cra 25 call 21', '2345', '2022-06-21 02:09:08', '2022-06-21 02:09:08'),
+(3, 'cewes', '345', 'erv', '2022-06-01', 'cra 25 call 21', '4232', '2022-06-21 02:09:53', '2022-06-21 02:09:53'),
+(4, 'cewes', '345', 'erv', '2022-06-01', 'cra 25 call 21', '4232', '2022-06-21 02:10:34', '2022-06-21 02:10:34'),
+(5, 'otras edicion', '23', 'apll otra ed', '2022-06-01', 'btervr', '65745', '2022-06-21 02:10:38', '2022-06-21 03:08:03'),
+(6, 'cewes', '345', 'erv', '2022-06-01', 'cra 25 call 21', '4232', '2022-06-21 02:10:41', '2022-06-21 02:10:41'),
+(7, 'cewes', '345', 'erv', '2022-06-01', 'cra 25 call 21', '4232', '2022-06-21 02:22:47', '2022-06-21 02:22:47'),
+(9, 'another', '2345', 'fewf', '2022-06-10', 'cra 25 call 21', '2345', '2022-06-21 03:04:58', '2022-06-21 03:04:58'),
+(10, 'another', '2345', 'fewf', '2022-06-10', 'cra 25 call 21', '2345', '2022-06-21 03:05:42', '2022-06-21 03:05:42'),
+(11, 'NuevoEmpleado', '2345', 'NuevoApp', '2022-05-25', 'e4r', '2345', '2022-06-21 03:08:38', '2022-06-21 03:08:38'),
+(12, 'empleado3', 'vbeervr', 'apleemple3', '2022-04-05', '234ds', '563', '2022-06-21 06:22:07', '2022-06-21 06:22:07');
 
 -- --------------------------------------------------------
 
@@ -105,10 +122,11 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (2, '2014_10_12_100000_create_password_resets_table', 1),
 (3, '2019_08_19_000000_create_failed_jobs_table', 1),
 (4, '2022_06_15_201124_empleado', 1),
-(5, '2022_06_15_201501_produccion', 1),
-(6, '2022_06_15_203003_compañia', 2),
-(7, '2022_06_15_203631_inventario', 3),
-(8, '2022_06_15_204131_producto', 4);
+(5, '2022_06_15_203003_compañia', 1),
+(6, '2022_06_15_203631_inventario', 1),
+(7, '2022_06_20_202802_produccion', 1),
+(8, '2022_06_20_202851_proveedor', 1),
+(9, '2022_06_20_202926_producto', 1);
 
 -- --------------------------------------------------------
 
@@ -193,6 +211,14 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
+-- Volcado de datos para la tabla `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `role`, `apellido`, `cedula`, `photo`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'juan', 'aa@asdf', NULL, '$2y$10$g0xMFtU7T2z.jw2kdA209.VPh0VGbNko.q0TSVTiKKPW4u9TSL33q', 'Usuario', 'def', '2345', 'avatars/q5XxwnqPegmHhTHZoErH8zfdBGhlxhvHTe4OdoXk.jpg', NULL, '2022-06-21 01:51:52', '2022-06-21 01:51:52'),
+(2, 'adminex', 'ver@gerg', NULL, '$2y$10$gZOH1n/mzzM7kz1PhsF5OuerbD9LpnNfX5WTMXOEcrstfvNlPeV9m', 'Administrador', 'adpellido', '123456', 'avatars/Li7zlRW1fI30m6aO33LBSAP74juGfxL6ev48Yuxo.jpg', NULL, '2022-06-21 01:53:06', '2022-06-21 01:53:06');
+
+--
 -- Índices para tablas volcadas
 --
 
@@ -203,9 +229,9 @@ ALTER TABLE `compañia`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `empleado`
+-- Indices de la tabla `empleados`
 --
-ALTER TABLE `empleado`
+ALTER TABLE `empleados`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -252,7 +278,9 @@ ALTER TABLE `producto`
 -- Indices de la tabla `proveedor`
 --
 ALTER TABLE `proveedor`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `proveedor_cedula_unique` (`cedula`),
+  ADD KEY `proveedor_id_comp_foreign` (`id_comp`);
 
 --
 -- Indices de la tabla `users`
@@ -272,10 +300,10 @@ ALTER TABLE `compañia`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `empleado`
+-- AUTO_INCREMENT de la tabla `empleados`
 --
-ALTER TABLE `empleado`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+ALTER TABLE `empleados`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `failed_jobs`
@@ -293,7 +321,7 @@ ALTER TABLE `inventario`
 -- AUTO_INCREMENT de la tabla `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `produccion`
@@ -317,7 +345,7 @@ ALTER TABLE `proveedor`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Restricciones para tablas volcadas
@@ -327,13 +355,19 @@ ALTER TABLE `users`
 -- Filtros para la tabla `produccion`
 --
 ALTER TABLE `produccion`
-  ADD CONSTRAINT `produccion_id_empleado_foreign` FOREIGN KEY (`id_empleado`) REFERENCES `empleado` (`id`);
+  ADD CONSTRAINT `produccion_id_empleado_foreign` FOREIGN KEY (`id_empleado`) REFERENCES `empleados` (`id`);
 
 --
 -- Filtros para la tabla `producto`
 --
 ALTER TABLE `producto`
   ADD CONSTRAINT `producto_id_inv_foreign` FOREIGN KEY (`id_inv`) REFERENCES `compañia` (`id`);
+
+--
+-- Filtros para la tabla `proveedor`
+--
+ALTER TABLE `proveedor`
+  ADD CONSTRAINT `proveedor_id_comp_foreign` FOREIGN KEY (`id_comp`) REFERENCES `compañia` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
