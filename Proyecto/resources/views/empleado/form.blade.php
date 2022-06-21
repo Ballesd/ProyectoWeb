@@ -2,32 +2,32 @@
     <div class="box-body">
         
         <div class="form-group">
-            {{ Form::label('nombre') }}
+            {{ Form::label('Nombre:') }}
             {{ Form::text('nombre', $empleado->nombre, ['class' => 'form-control' . ($errors->has('nombre') ? ' is-invalid' : ''), 'placeholder' => 'Nombre']) }}
             {!! $errors->first('nombre', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('cedula') }}
+            {{ Form::label('Cédula:') }}
             {{ Form::text('cedula', $empleado->cedula, ['class' => 'form-control' . ($errors->has('cedula') ? ' is-invalid' : ''), 'placeholder' => 'Cedula']) }}
             {!! $errors->first('cedula', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('apellido') }}
+            {{ Form::label('Apellido:') }}
             {{ Form::text('apellido', $empleado->apellido, ['class' => 'form-control' . ($errors->has('apellido') ? ' is-invalid' : ''), 'placeholder' => 'Apellido']) }}
             {!! $errors->first('apellido', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('fecha_ingreso') }}
+            {{ Form::label('Fecha ingreso:') }}
             {{ Form::date('fecha_ingreso', $empleado->fecha_ingreso, ['class' => 'form-control' . ($errors->has('fecha_ingreso') ? ' is-invalid' : ''), 'placeholder' => 'Fecha Ingreso']) }}
             {!! $errors->first('fecha_ingreso', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('direccion') }}
-            {{ Form::text('direccion', $empleado->direccion, ['class' => 'form-control' . ($errors->has('direccion') ? ' is-invalid' : ''), 'placeholder' => 'Direccion']) }}
+            {{ Form::label('Dirección:') }}
+            {{ Form::text('direccion', $empleado->direccion, ['class' => 'form-control' . ($errors->has('direccion') ? ' is-invalid' : ''), 'placeholder' => 'Dirección']) }}
             {!! $errors->first('direccion', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('telefono') }}
+            {{ Form::label('Telefono:') }}
             {{ Form::text('telefono', $empleado->telefono, ['class' => 'form-control' . ($errors->has('telefono') ? ' is-invalid' : ''), 'placeholder' => 'Telefono']) }}
             {!! $errors->first('telefono', '<div class="invalid-feedback">:message</div>') !!}
         </div>
