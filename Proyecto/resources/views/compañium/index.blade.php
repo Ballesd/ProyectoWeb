@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Compañias
+    Compañia
 @endsection
 
 @section('content')
@@ -18,7 +18,7 @@
 
                              <div class="float-right">
                                 <a href="{{ route('compañia.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Ingresar Nueva') }}
+                                  {{ __('Añadir Empresa') }}
                                 </a>
                               </div>
                         </div>
@@ -52,9 +52,9 @@
 
                                             <td>
                                                 <form action="{{ route('compañia.destroy',$compañium->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('compañia.show',$compañium->id) }}"><i class="fa fa-fw fa-eye"></i> Mostar</a>
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('compañia.show',$compañium->id) }}"><i class="fa fa-fw fa-eye"></i> Mostrar</a>
                                                     <a class="btn btn-sm btn-success" href="{{ route('compañia.edit',$compañium->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
-                                                    @csrf
+                                                    @csrf 
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Borrar</button>
                                                 </form>

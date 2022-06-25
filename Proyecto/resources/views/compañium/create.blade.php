@@ -1,23 +1,22 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Update Compañium
+    Añadir compañia
 @endsection
 
 @section('content')
     <section class="content container-fluid">
-        <div class="">
+        <div class="row">
             <div class="col-md-12">
 
                 @includeif('partials.errors')
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Update Compañium</span>
+                        <span class="card-title">Añadir Compañia</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('compañia.update', $compañium->id) }}"  role="form" enctype="multipart/form-data">
-                            {{ method_field('PATCH') }}
+                        <form method="POST" action="{{ route('compañia.store') }}"  role="form" enctype="multipart/form-data">
                             @csrf
 
                             @include('compañium.form')
