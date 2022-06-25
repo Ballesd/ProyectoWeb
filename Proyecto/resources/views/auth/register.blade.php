@@ -4,9 +4,6 @@
 
 @section('content')
 
-<script src="https://cdn.tailwindcss.com"></script>
-
-
 <section class="px-5 md:px-44 lg:px-72">
   <div class="bg-gray-200 p-10 rounded-2xl">
     <h1 class="flex justify-center font-bold text-3xl">Register</h1>
