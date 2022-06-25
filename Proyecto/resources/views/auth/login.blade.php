@@ -3,8 +3,6 @@
 @section('title', 'Login')
 
 @section('content')
-<script src="https://cdn.tailwindcss.com"></script>
-
 
 <section class="px-5 lg:px-96">
     <div class="bg-gray-200 p-10 rounded-2xl">
