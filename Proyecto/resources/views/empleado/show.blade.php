@@ -11,10 +11,10 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Empleado</span>
+                            <span class="card-title">Empleado: </span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('empleado.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('empleado.index') }}"> Volver</a>
                         </div>
                     </div>
 
