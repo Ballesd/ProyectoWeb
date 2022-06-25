@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class Compañium
+ * Class Compañia
  *
  * @property $id
  * @property $nombre_empresa
@@ -18,7 +18,7 @@ use Illuminate\Database\Eloquent\Model;
  * @package App
  * @mixin \Illuminate\Database\Eloquent\Builder
  */
-class Compañium extends Model
+class Compañia extends Model
 {
     
     static $rules = [

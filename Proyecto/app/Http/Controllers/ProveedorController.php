@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Proveedor;
+use App\Models\Compañia;
 use Illuminate\Http\Request;
 
 /**
@@ -32,7 +33,9 @@ class ProveedorController extends Controller
     public function create()
     {
         $proveedor = new Proveedor();
-        return view('proveedor.create', compact('proveedor'));
+        $compañia = Compañia::pluck('nombre_empresa','id');
+
+        return view('proveedor.create', compact('proveedor','compañia'));
     }
 
     /**
@@ -47,8 +50,8 @@ class ProveedorController extends Controller
 
         $proveedor = Proveedor::create($request->all());
 
-        return redirect()->route('proveedors.index')
-            ->with('success', 'Proveedor created successfully.');
+        return redirect()->route('proveedor.index')
+            ->with('success', 'Proveedor ingresado.');
     }
 
     /**
@@ -73,8 +76,8 @@ class ProveedorController extends Controller
     public function edit($id)
     {
         $proveedor = Proveedor::find($id);
-
-        return view('proveedor.edit', compact('proveedor'));
+        $compañia = Compañia::pluck('nombre_empresa','id');
+        return view('proveedor.edit', compact('proveedor','compañia'));
     }
 
     /**
@@ -90,8 +93,8 @@ class ProveedorController extends Controller
 
         $proveedor->update($request->all());
 
-        return redirect()->route('proveedors.index')
-            ->with('success', 'Proveedor updated successfully');
+        return redirect()->route('proveedor.index')
+            ->with('success', 'Proveedor editado');
     }
 
     /**
@@ -103,7 +106,7 @@ class ProveedorController extends Controller
     {
         $proveedor = Proveedor::find($id)->delete();
 
-        return redirect()->route('proveedors.index')
-            ->with('success', 'Proveedor deleted successfully');
+        return redirect()->route('proveedor.index')
+            ->with('success', 'Proveedor borrado');
     }
 }

@@ -16,7 +16,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property $created_at
  * @property $updated_at
  *
- * @property Compañium $compañium
+ * @property Compañia $compañia
  * @package App
  * @mixin \Illuminate\Database\Eloquent\Builder
  */
@@ -44,9 +44,9 @@ class Proveedor extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
-    public function compañium()
+    public function compañia()
     {
-        return $this->hasOne('App\Models\Compañium', 'id', 'id_comp');
+        return $this->hasOne('App\Models\Compañia', 'id', 'id_comp');
     }
     
 

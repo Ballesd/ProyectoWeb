@@ -13,7 +13,7 @@ class Compañia extends Migration
      */
     public function up()
     {
-        Schema::create('compañia', function (Blueprint $table) {
+        Schema::create('compañias', function (Blueprint $table) {
             $table->id();
 
             $table->string('nombre_empresa');

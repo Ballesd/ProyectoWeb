@@ -21,15 +21,14 @@
             {{ Form::text('telefono', $proveedor->telefono, ['class' => 'form-control' . ($errors->has('telefono') ? ' is-invalid' : ''), 'placeholder' => 'Telefono']) }}
             {!! $errors->first('telefono', '<div class="invalid-feedback">:message</div>') !!}
         </div>
-        
+
         <div class="form-group">
-            {{ Form::label('id_comp') }}
-            {{ Form::text('id_comp', $proveedor->id_comp, ['class' => 'form-control' . ($errors->has('id_comp') ? ' is-invalid' : ''), 'placeholder' => 'Id Comp']) }}
+            {{ Form::label('Compañia asociada:') }}
+            {{ Form::select('id_comp',$compañia ,$proveedor->id_comp, ['class' => 'form-control' . ($errors->has('id_comp') ? ' is-invalid' : ''), 'placeholder' => 'Id Comp']) }}
             {!! $errors->first('id_comp', '<div class="invalid-feedback">:message</div>') !!}
         </div>
-
     </div>
     <div class="box-footer mt20">
-        <button type="submit" class="btn btn-primary">Gurdar</button>
+        <button type="submit" class="btn btn-primary">Guardar</button>
     </div>
 </div>

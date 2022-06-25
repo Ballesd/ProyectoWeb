@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Compañium;
+use App\Models\Compañia;
 use Illuminate\Http\Request;
 
 /**
- * Class CompañiumController
+ * Class CompañiaController
  * @package App\Http\Controllers
  */
-class CompañiumController extends Controller
+class CompañiaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,10 +18,10 @@ class CompañiumController extends Controller
      */
     public function index()
     {
-        $compañia = Compañium::paginate();
+        $compañias = Compañia::paginate();
 
-        return view('compañia.index', compact('compañia'))
-            ->with('i', (request()->input('page', 1) - 1) * $compañia->perPage());
+        return view('compañia.index', compact('compañias'))
+            ->with('i', (request()->input('page', 1) - 1) * $compañias->perPage());
     }
 
     /**
@@ -31,8 +31,8 @@ class CompañiumController extends Controller
      */
     public function create()
     {
-        $compañium = new Compañium();
-        return view('compañia.create', compact('compañium'));
+        $compañia = new Compañia();
+        return view('compañia.create', compact('compañia'));
     }
 
     /**
@@ -43,12 +43,12 @@ class CompañiumController extends Controller
      */
     public function store(Request $request)
     {
-        request()->validate(Compañium::$rules);
+        request()->validate(Compañia::$rules);
 
-        $compañium = Compañium::create($request->all());
+        $compañia = Compañia::create($request->all());
 
         return redirect()->route('compañia.index')
-            ->with('success', 'Compañium created successfully.');
+            ->with('success', 'Compañia añadida.');
     }
 
     /**
@@ -59,9 +59,9 @@ class CompañiumController extends Controller
      */
     public function show($id)
     {
-        $compañium = Compañium::find($id);
+        $compañia = Compañia::find($id);
 
-        return view('compañia.show', compact('compañium'));
+        return view('compañia.show', compact('compañia'));
     }
 
     /**
@@ -72,26 +72,26 @@ class CompañiumController extends Controller
      */
     public function edit($id)
     {
-        $compañium = Compañium::find($id);
+        $compañia = Compañia::find($id);
 
-        return view('compañia.edit', compact('compañium'));
+        return view('compañia.edit', compact('compañia'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request $request
-     * @param  Compañium $compañium
+     * @param  Compañia $compañia
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Compañium $compañium)
+    public function update(Request $request, Compañia $compañia)
     {
-        request()->validate(Compañium::$rules);
+        request()->validate(Compañia::$rules);
 
-        $compañium->update($request->all());
+        $compañia->update($request->all());
 
         return redirect()->route('compañia.index')
-            ->with('success', 'Compañium updated successfully');
+            ->with('success', 'Compañia editada correctamente');
     }
 
     /**
@@ -101,9 +101,9 @@ class CompañiumController extends Controller
      */
     public function destroy($id)
     {
-        $compañium = Compañium::find($id)->delete();
+        $compañia = Compañia::find($id)->delete();
 
         return redirect()->route('compañia.index')
-            ->with('success', 'Compañium deleted successfully');
+            ->with('success', 'Compañia borrada exitosamente');
     }
 }

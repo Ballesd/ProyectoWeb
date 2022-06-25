@@ -13,7 +13,7 @@ Route::get('/', function () {
 
 Route::resource('empleado', App\Http\Controllers\EmpleadoController::class);
 Route::resource('proveedor', App\Http\Controllers\ProveedorController::class);
-Route::resource('compañia', App\Http\Controllers\CompañiumController::class);    
+Route::resource('compañia', App\Http\Controllers\CompañiaController::class);    
 
 Route::get('/register', [RegisterController::class, 'create'])
     ->middleware('guest') 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-06-2022 a las 01:23:44
+-- Tiempo de generación: 26-06-2022 a las 01:45:24
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -24,16 +24,26 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `compañia`
+-- Estructura de tabla para la tabla `compañias`
 --
 
-CREATE TABLE `compañia` (
+CREATE TABLE `compañias` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `nombre_empresa` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `ciudad` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `compañias`
+--
+
+INSERT INTO `compañias` (`id`, `nombre_empresa`, `ciudad`, `created_at`, `updated_at`) VALUES
+(1, 'assa', 'manizales', '2022-06-26 03:59:50', '2022-06-26 03:59:50'),
+(2, 'as2w2', 'asd', '2022-06-26 04:02:08', '2022-06-26 04:02:08'),
+(3, 'as2w2', 'asd', '2022-06-26 04:02:54', '2022-06-26 04:02:54'),
+(4, 'empresa test', 'manizales', '2022-06-26 04:06:38', '2022-06-26 04:06:38');
 
 -- --------------------------------------------------------
 
@@ -52,23 +62,6 @@ CREATE TABLE `empleados` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Volcado de datos para la tabla `empleados`
---
-
-INSERT INTO `empleados` (`id`, `nombre`, `cedula`, `apellido`, `fecha_ingreso`, `direccion`, `telefono`, `created_at`, `updated_at`) VALUES
-(1, 'edicion', '432', 'vdsc', '2022-06-08', 'vrevre', '87654', '2022-06-21 02:08:29', '2022-06-21 03:06:27'),
-(2, 'xxpers', 'rever', 'vdsc', '2022-06-08', 'cra 25 call 21', '2345', '2022-06-21 02:09:08', '2022-06-21 02:09:08'),
-(3, 'cewes', '345', 'erv', '2022-06-01', 'cra 25 call 21', '4232', '2022-06-21 02:09:53', '2022-06-21 02:09:53'),
-(4, 'cewes', '345', 'erv', '2022-06-01', 'cra 25 call 21', '4232', '2022-06-21 02:10:34', '2022-06-21 02:10:34'),
-(5, 'otras edicion', '23', 'apll otra ed', '2022-06-01', 'btervr', '65745', '2022-06-21 02:10:38', '2022-06-21 03:08:03'),
-(6, 'cewes', '345', 'erv', '2022-06-01', 'cra 25 call 21', '4232', '2022-06-21 02:10:41', '2022-06-21 02:10:41'),
-(7, 'cewes', '345', 'erv', '2022-06-01', 'cra 25 call 21', '4232', '2022-06-21 02:22:47', '2022-06-21 02:22:47'),
-(9, 'another', '2345', 'fewf', '2022-06-10', 'cra 25 call 21', '2345', '2022-06-21 03:04:58', '2022-06-21 03:04:58'),
-(10, 'another', '2345', 'fewf', '2022-06-10', 'cra 25 call 21', '2345', '2022-06-21 03:05:42', '2022-06-21 03:05:42'),
-(11, 'NuevoEmpleado', '2345', 'NuevoApp', '2022-05-25', 'e4r', '2345', '2022-06-21 03:08:38', '2022-06-21 03:08:38'),
-(12, 'empleado3', 'vbeervr', 'apleemple3', '2022-04-05', '234ds', '563', '2022-06-21 06:22:07', '2022-06-21 06:22:07');
 
 -- --------------------------------------------------------
 
@@ -175,10 +168,10 @@ CREATE TABLE `producto` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `proveedor`
+-- Estructura de tabla para la tabla `proveedors`
 --
 
-CREATE TABLE `proveedor` (
+CREATE TABLE `proveedors` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `cedula` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `nombre` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -188,6 +181,16 @@ CREATE TABLE `proveedor` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `proveedors`
+--
+
+INSERT INTO `proveedors` (`id`, `cedula`, `nombre`, `apellido`, `telefono`, `id_comp`, `created_at`, `updated_at`) VALUES
+(4, '23564', 'edicion', 'ed appel', '43', 2, '2022-06-26 04:27:59', '2022-06-26 04:40:13'),
+(5, '7654', 'ottroporb', 'apellid prov', '75434', 3, '2022-06-26 04:38:35', '2022-06-26 04:38:35'),
+(6, '6753', 'tercero', 'ap tercerp', '5437', 4, '2022-06-26 04:41:48', '2022-06-26 04:41:48'),
+(7, '4372', 'test', 'grere', '6534', 1, '2022-06-26 04:42:13', '2022-06-26 04:42:13');
 
 -- --------------------------------------------------------
 
@@ -211,21 +214,13 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Volcado de datos para la tabla `users`
---
-
-INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `role`, `apellido`, `cedula`, `photo`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'juan', 'aa@asdf', NULL, '$2y$10$g0xMFtU7T2z.jw2kdA209.VPh0VGbNko.q0TSVTiKKPW4u9TSL33q', 'Usuario', 'def', '2345', 'avatars/q5XxwnqPegmHhTHZoErH8zfdBGhlxhvHTe4OdoXk.jpg', NULL, '2022-06-21 01:51:52', '2022-06-21 01:51:52'),
-(2, 'adminex', 'ver@gerg', NULL, '$2y$10$gZOH1n/mzzM7kz1PhsF5OuerbD9LpnNfX5WTMXOEcrstfvNlPeV9m', 'Administrador', 'adpellido', '123456', 'avatars/Li7zlRW1fI30m6aO33LBSAP74juGfxL6ev48Yuxo.jpg', NULL, '2022-06-21 01:53:06', '2022-06-21 01:53:06');
-
---
 -- Índices para tablas volcadas
 --
 
 --
--- Indices de la tabla `compañia`
+-- Indices de la tabla `compañias`
 --
-ALTER TABLE `compañia`
+ALTER TABLE `compañias`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -275,12 +270,12 @@ ALTER TABLE `producto`
   ADD KEY `producto_id_inv_foreign` (`id_inv`);
 
 --
--- Indices de la tabla `proveedor`
+-- Indices de la tabla `proveedors`
 --
-ALTER TABLE `proveedor`
+ALTER TABLE `proveedors`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `proveedor_cedula_unique` (`cedula`),
-  ADD KEY `proveedor_id_comp_foreign` (`id_comp`);
+  ADD UNIQUE KEY `proveedors_cedula_unique` (`cedula`),
+  ADD KEY `proveedors_id_comp_foreign` (`id_comp`);
 
 --
 -- Indices de la tabla `users`
@@ -294,16 +289,16 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT de la tabla `compañia`
+-- AUTO_INCREMENT de la tabla `compañias`
 --
-ALTER TABLE `compañia`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+ALTER TABLE `compañias`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `empleados`
 --
 ALTER TABLE `empleados`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `failed_jobs`
@@ -336,16 +331,16 @@ ALTER TABLE `producto`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `proveedor`
+-- AUTO_INCREMENT de la tabla `proveedors`
 --
-ALTER TABLE `proveedor`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+ALTER TABLE `proveedors`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- Restricciones para tablas volcadas
@@ -361,13 +356,13 @@ ALTER TABLE `produccion`
 -- Filtros para la tabla `producto`
 --
 ALTER TABLE `producto`
-  ADD CONSTRAINT `producto_id_inv_foreign` FOREIGN KEY (`id_inv`) REFERENCES `compañia` (`id`);
+  ADD CONSTRAINT `producto_id_inv_foreign` FOREIGN KEY (`id_inv`) REFERENCES `compañias` (`id`);
 
 --
--- Filtros para la tabla `proveedor`
+-- Filtros para la tabla `proveedors`
 --
-ALTER TABLE `proveedor`
-  ADD CONSTRAINT `proveedor_id_comp_foreign` FOREIGN KEY (`id_comp`) REFERENCES `compañia` (`id`);
+ALTER TABLE `proveedors`
+  ADD CONSTRAINT `proveedors_id_comp_foreign` FOREIGN KEY (`id_comp`) REFERENCES `compañias` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -2,18 +2,18 @@
     <div class="box-body">
         
         <div class="form-group">
-            {{ Form::label('Nombre Empresa:') }}
-            {{ Form::text('nombre_empresa', $compañium->nombre_empresa, ['class' => 'form-control' . ($errors->has('nombre_empresa') ? ' is-invalid' : ''), 'placeholder' => 'Nombre Empresa']) }}
+            {{ Form::label('nombre_empresa') }}
+            {{ Form::text('nombre_empresa', $compañia->nombre_empresa, ['class' => 'form-control' . ($errors->has('nombre_empresa') ? ' is-invalid' : ''), 'placeholder' => 'Nombre Empresa']) }}
             {!! $errors->first('nombre_empresa', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('Ciudad:') }}
-            {{ Form::text('ciudad', $compañium->ciudad, ['class' => 'form-control' . ($errors->has('ciudad') ? ' is-invalid' : ''), 'placeholder' => 'Ciudad']) }}
+            {{ Form::label('ciudad') }}
+            {{ Form::text('ciudad', $compañia->ciudad, ['class' => 'form-control' . ($errors->has('ciudad') ? ' is-invalid' : ''), 'placeholder' => 'Ciudad']) }}
             {!! $errors->first('ciudad', '<div class="invalid-feedback">:message</div>') !!}
         </div>
 
     </div>
     <div class="box-footer mt20">
-        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
     </div>
 </div>

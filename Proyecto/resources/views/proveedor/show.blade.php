@@ -11,17 +11,21 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Proveedor</span>
+                            <span class="card-title">Mostrar Proveedor</span>
+                        </div>
+                        <div>
+
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('proveedor.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('proveedor.index') }}"> Volver</a>
                         </div>
                     </div>
 
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Cedula:</strong>
+
+                            <strong>Cédula:</strong>
                             {{ $proveedor->cedula }}
                         </div>
                         <div class="form-group">
@@ -33,11 +37,11 @@
                             {{ $proveedor->apellido }}
                         </div>
                         <div class="form-group">
-                            <strong>Telefono:</strong>
+                            <strong>Teléfono:</strong>
                             {{ $proveedor->telefono }}
                         </div>
                         <div class="form-group">
-                            <strong>Id Comp:</strong>
+                            <strong>Id Compañia:</strong>
                             {{ $proveedor->id_comp }}
                         </div>
 
