@@ -12,34 +12,6 @@
 
 <body>
 
-    <!-- CODIGO QUE HABÍA ANTES(COMENTADO)
-        
-    <nav>
-        <div>
-            <h1>
-                TEXTO PAGINA aplicacion
-            </h1>
-        </div>
-        <ul>
-            @if(auth()->check())
-                <li>
-                    <p>BIENVENIDO <b>{{ auth()->user()->name }}</b></p>
-                </li>
-                <li>
-                    <a href="{{ route('login.destroy')  }}">Cerrar sesion</a>
-                    
-                </li>
-            @else
-                <li>
-                    <a href="{{ route('login.index')  }}">Ingresar</a>
-                </li>
-                <li>
-                    <a href="{{ route('register.index')  }}">Registrarse</a>
-                </li> 
-            @endif
-        </ul>
-    </nav> -->
-
     <nav class="bg-black text-white flex justify-between px-14 py-5 items-center">
         <div class="text-4xl space-x-10">
             <a href="{{ url('admin') }}" class="hover:text-sky-500"><i class="fa-solid fa-house"></i></a>
@@ -70,9 +42,8 @@
         </ul>
     </nav>
 
-
-
     @yield('content')
+
 </body>
 
 </html>
