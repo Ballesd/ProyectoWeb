@@ -20,7 +20,7 @@ class CompañiumController extends Controller
     {
         $compañia = Compañium::paginate();
 
-        return view('compañium.index', compact('compañia'))
+        return view('compañia.index', compact('compañia'))
             ->with('i', (request()->input('page', 1) - 1) * $compañia->perPage());
     }
 
@@ -32,7 +32,7 @@ class CompañiumController extends Controller
     public function create()
     {
         $compañium = new Compañium();
-        return view('compañium.create', compact('compañium'));
+        return view('compañia.create', compact('compañium'));
     }
 
     /**
@@ -61,7 +61,7 @@ class CompañiumController extends Controller
     {
         $compañium = Compañium::find($id);
 
-        return view('compañium.show', compact('compañium'));
+        return view('compañia.show', compact('compañium'));
     }
 
     /**
@@ -74,7 +74,7 @@ class CompañiumController extends Controller
     {
         $compañium = Compañium::find($id);
 
-        return view('compañium.edit', compact('compañium'));
+        return view('compañia.edit', compact('compañium'));
     }
 
     /**
