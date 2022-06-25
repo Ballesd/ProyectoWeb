@@ -13,7 +13,7 @@ class Proveedor extends Migration
      */
     public function up()
     {
-        Schema::create('proveedor', function (Blueprint $table) {
+        Schema::create('proveedors', function (Blueprint $table) {
             $table->id();
 
             $table->string('cedula')->unique();
