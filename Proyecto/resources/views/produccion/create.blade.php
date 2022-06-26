@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Ingresar Compañia
+    Create Produccion
 @endsection
 
 @section('content')
@@ -13,13 +13,13 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Ingresar Compañia</span>
+                        <span class="card-title">Create Produccion</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('compañia.store') }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('produccion.store') }}"  role="form" enctype="multipart/form-data">
                             @csrf
 
-                            @include('compañia.form')
+                            @include('produccion.form')
 
                         </form>
                     </div>
