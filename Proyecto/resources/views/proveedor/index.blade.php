@@ -21,6 +21,11 @@
                                   {{ __('Ingresar Nuevo') }}
                                 </a>
                               </div>
+                              <div class="float-right">
+                                <a href="{{ route('descargar-pdf') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                  {{ __('Generar lista de proveedores (PDF)') }}
+                                </a>
+                              </div>
                         </div>
                     </div>
                     @if ($message = Session::get('success'))
