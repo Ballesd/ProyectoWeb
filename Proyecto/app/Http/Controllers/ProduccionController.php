@@ -49,8 +49,8 @@ class ProduccionController extends Controller
 
         $produccion = Produccion::create($request->all());
 
-        return redirect()->route('produccions.index')
-            ->with('success', 'Produccion created successfully.');
+        return redirect()->route('produccion.index')
+            ->with('success', 'Produccion añadida.');
     }
 
     /**
@@ -75,7 +75,8 @@ class ProduccionController extends Controller
     public function edit($id)
     {
         $produccion = Produccion::find($id);
-        return view('produccion.edit', compact('produccion'));
+        $empleado = Empleado::pluck('nombre','id');
+        return view('produccion.edit', compact('produccion','empleado'));
     }
 
     /**
@@ -91,8 +92,8 @@ class ProduccionController extends Controller
 
         $produccion->update($request->all());
 
-        return redirect()->route('produccions.index')
-            ->with('success', 'Produccion updated successfully');
+        return redirect()->route('produccion.index')
+            ->with('success', 'Produccion editada');
     }
 
     /**
@@ -104,7 +105,7 @@ class ProduccionController extends Controller
     {
         $produccion = Produccion::find($id)->delete();
 
-        return redirect()->route('produccions.index')
-            ->with('success', 'Produccion deleted successfully');
+        return redirect()->route('produccion.index')
+            ->with('success', 'Produccion borrada');
     }
 }

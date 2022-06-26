@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Create Produccion
+    Añadir Produccion
 @endsection
 
 @section('content')
@@ -13,7 +13,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Create Produccion</span>
+                        <span class="card-title">Añadir Produccion</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('produccion.store') }}"  role="form" enctype="multipart/form-data">
