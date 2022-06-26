@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Proveedor;
 use App\Models\Compañia;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade as PDF;
 
 /**
  * Class ProveedorController
@@ -108,5 +109,11 @@ class ProveedorController extends Controller
 
         return redirect()->route('proveedor.index')
             ->with('success', 'Proveedor borrado');
+    }
+
+    public function generar_pdf(){
+        $proveedor = Proveedor::all();
+        $pdf = PDF::loadview('proveedor.generar_pdf',compact('proveedor'));
+        return $pdf->download('proveedor.pdf');
     }
 }
