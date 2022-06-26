@@ -12,8 +12,8 @@
 
 <body>
 
-    <nav class="bg-black text-white flex justify-between px-14 py-5 items-center">
-        <div class="text-4xl space-x-10">
+    <nav class="bg-black text-white flex justify-between px-14 py-5 items-center sticky top-0">
+        <div class="text-xs lg:text-4xl space-x-3 lg:space-x-10">
             <a href="{{ url('admin') }}" class="hover:text-sky-500"><i class="fa-solid fa-house"></i></a>
             <a href="{{ url('admin') }}" class="hover:text-sky-500"><i class="fa-solid fa-chart-pie"></i></a>
             <a href="{{ url('admin') }}" class="hover:text-sky-500"><i class="fa-solid fa-cart-flatbed-suitcase"></i></a>
@@ -32,13 +32,18 @@
 
             </li>
             @else
-            <li>
-                <a href="{{ route('login.index')  }}">Ingresar</a>
-            </li>
-            <li>
-                <a href="{{ route('register.index')  }}">Registrarse</a>
-            </li>
-            @endif
+        
+            <div class="flex justify-end gap-2 lg:gap-10 lg:h-auto">
+                <button class="bg-blue-500 hover:bg-blue-800 py-2 px-7 font-bold rounded-xl">
+                    <a class="text-xs lg:text-lg" href="{{ route('login.index')  }}">Ingresar</a>
+                </button>
+            
+
+                <button class="bg-blue-500 hover:bg-blue-800 py-2 px-7 font-bold rounded-xl">
+                    <a class="text-xs lg:text-lg" href="{{ route('register.index')  }}">Registrarse</a>
+                </button>
+                @endif
+            </div>
         </ul>
     </nav>
 
