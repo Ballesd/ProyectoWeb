@@ -48,13 +48,13 @@
                                 <tbody>
                                     @foreach ($proveedors as $proveedor)
                                         <tr>
-                                            <td>{{ ++$i }}</td>
+                                            <td>{{ ++$i }}</td> 
                                             
 											<td>{{ $proveedor->cedula }}</td>
 											<td>{{ $proveedor->nombre }}</td>
 											<td>{{ $proveedor->apellido }}</td>
 											<td>{{ $proveedor->telefono }}</td>
-											<td>{{ $proveedor->id_comp }}</td>
+											<td>{{ $proveedor->compañia->nombre_empresa }}</td>
 
                                             <td>
                                                 <form action="{{ route('proveedor.destroy',$proveedor->id) }}" method="POST">
