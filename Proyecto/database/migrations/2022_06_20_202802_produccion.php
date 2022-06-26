@@ -13,11 +13,11 @@ class Produccion extends Migration
      */
     public function up()
     {
-        Schema::create('produccion', function (Blueprint $table) {
+        Schema::create('produccions', function (Blueprint $table) {
             $table->id();
 
             $table->integer('cantidad');
-            $table->time('horas_extra');
+            $table->decimal('horas_extra');
             $table->unsignedBigInteger('id_empleado');
 
             $table->timestamps();

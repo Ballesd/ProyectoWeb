@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Compañia
+    Produccion
 @endsection
 
 @section('content')
@@ -13,12 +13,12 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Compañia') }}
+                                {{ __('Produccion') }}
                             </span>
 
                              <div class="float-right">
-                                <a href="{{ route('compañia.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Ingresar compañia') }}
+                                <a href="{{ route('produccion.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                  {{ __('Añadir') }}
                                 </a>
                               </div>
                         </div>
@@ -36,24 +36,26 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Nombre Empresa</th>
-										<th>Ciudad</th>
+										<th>Cantidad</th>
+										<th>Horas Extra</th>
+										<th>Id Empleado</th>
 
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($compañias as $compañia)
+                                    @foreach ($produccions as $produccion)
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $compañia->nombre_empresa }}</td>
-											<td>{{ $compañia->ciudad }}</td>
+											<td>{{ $produccion->cantidad }}</td>
+											<td>{{ $produccion->horas_extra }}</td>
+											<td>{{ $produccion->empleado->nombre }}</td>
 
                                             <td>
-                                                <form action="{{ route('compañia.destroy',$compañia->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('compañia.show',$compañia->id) }}"><i class="fa fa-fw fa-eye"></i> Mostra</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('compañia.edit',$compañia->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
+                                                <form action="{{ route('produccion.destroy',$produccion->id) }}" method="POST">
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('produccion.show',$produccion->id) }}"><i class="fa fa-fw fa-eye"></i> Mostar</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('produccion.edit',$produccion->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Borrar</button>
@@ -66,7 +68,7 @@
                         </div>
                     </div>
                 </div>
-                {!! $compañias->links() !!}
+                {!! $produccions->links() !!}
             </div>
         </div>
     </div>
