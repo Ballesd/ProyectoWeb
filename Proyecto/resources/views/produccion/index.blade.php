@@ -50,7 +50,7 @@
                                             
 											<td>{{ $produccion->cantidad }}</td>
 											<td>{{ $produccion->horas_extra }}</td>
-											<td>{{ $produccion->id_empleado }}</td>
+											<td>{{ $produccion->empleado->nombre }}</td>
 
                                             <td>
                                                 <form action="{{ route('produccion.destroy',$produccion->id) }}" method="POST">

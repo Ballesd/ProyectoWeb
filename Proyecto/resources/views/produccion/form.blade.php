@@ -8,12 +8,12 @@
         </div>
         <div class="form-group">
             {{ Form::label('horas_extra') }}
-            {{ Form::text('horas_extra', $produccion->horas_extra, ['class' => 'form-control' . ($errors->has('horas_extra') ? ' is-invalid' : ''), 'placeholder' => 'Horas Extra']) }}
+            {{ Form::number('horas_extra', $produccion->horas_extra, ['class' => 'form-control' . ($errors->has('horas_extra') ? ' is-invalid' : ''), 'placeholder' => 'Horas Extra']) }}
             {!! $errors->first('horas_extra', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
             {{ Form::label('id_empleado') }}
-            {{ Form::select('id_empleado', $produccion->id_empleado, ['class' => 'form-control' . ($errors->has('id_empleado') ? ' is-invalid' : ''), 'placeholder' => 'Id Empleado']) }}
+            {{ Form::select('id_empleado',$empleado, $produccion->id_empleado, ['class' => 'form-control' . ($errors->has('id_empleado') ? ' is-invalid' : ''), 'placeholder' => 'Id Empleado']) }}
             {!! $errors->first('id_empleado', '<div class="invalid-feedback">:message</div>') !!}
         </div>
 
