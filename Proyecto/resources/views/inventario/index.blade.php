@@ -5,7 +5,7 @@ Inventario
 @endsection
 
 @section('content')
-<div>
+<div class="mb-10">
     <div>
         <div>
             <div>
@@ -32,8 +32,8 @@ Inventario
                 @endif
 
                 <div>
-                    <div class="relative overflow-x-auto flex justify-center text-center mx-3 lg:mx-20">
-                        <table class="table-auto w-full">
+                    <div class="relative overflow-x-auto flex justify-center text-center mx-3 lg:mx-20 border border-black rounded-xl shadow-2xl">
+                        <table class="table-auto w-full  ">
                             <thead>
                                 <tr>
                                     <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-gray-600 tracking-wider">
