@@ -5,64 +5,82 @@
 @endsection
 
 @section('content')
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <div class="card-header">
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
+    <div>
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <div class="flex justify-around py-5 mb-5">
 
-                            <span id="card_title">
+                            <span class="text-4xl font-bold" id="card_title">
                                 {{ __('Proveedor') }}
                             </span>
 
-                             <div class="float-right">
-                                <a href="{{ route('proveedor.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                             <div>
+                                <a href="{{ route('proveedor.create') }}"  data-placement="left">
+                                  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">{{ __('Create New') }}</button>
                                 </a>
                               </div>
                         </div>
                     </div>
+
+
                     @if ($message = Session::get('success'))
-                        <div class="alert alert-success">
+                        <div class="bg-green-500">
                             <p>{{ $message }}</p>
                         </div>
                     @endif
 
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-striped table-hover">
-                                <thead class="thead">
+                    <div>
+                        <div class="relative overflow-x-auto flex justify-center text-center mx-3 lg:mx-20">
+                            <table class="table-auto w-full">
+                                <thead>
                                     <tr>
-                                        <th>No</th>
+                                        <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-gray-600 tracking-wider">
+                                            No
+                                        </th>
                                         
-										<th>Cedula</th>
-										<th>Nombre</th>
-										<th>Apellido</th>
-										<th>Telefono</th>
-										<th>Id Comp</th>
+										<th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-gray-600 tracking-wider">
+                                            Cedula
+                                        </th>
 
-                                        <th></th>
+										<th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-gray-600 tracking-wider">
+                                            Nombre
+                                        </th>
+
+										<th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-gray-600 tracking-wider">
+                                            Apellido
+                                        </th>
+
+										<th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-gray-600 tracking-wider">
+                                            Telefono
+                                        </th>
+
+										<th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-gray-600 tracking-wider">
+                                            Id Comp
+                                        </th>
+
+                                        <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100  text-gray-600 tracking-wider"></th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody class="border-black">
                                     @foreach ($proveedors as $proveedor)
-                                        <tr>
-                                            <td>{{ ++$i }}</td>
+                                        <tr class="hover:bg-gray-100">
+                                            <td class="py-3 border-b border-gray-300">{{ ++$i }}</td>
                                             
-											<td>{{ $proveedor->cedula }}</td>
-											<td>{{ $proveedor->nombre }}</td>
-											<td>{{ $proveedor->apellido }}</td>
-											<td>{{ $proveedor->telefono }}</td>
-											<td>{{ $proveedor->id_comp }}</td>
+											<td class="py-3 border-b border-gray-300">{{ $proveedor->cedula }}</td>
+											<td class="py-3 border-b border-gray-300">{{ $proveedor->nombre }}</td>
+											<td class="py-3 border-b border-gray-300">{{ $proveedor->apellido }}</td>
+											<td class="py-3 border-b border-gray-300">{{ $proveedor->telefono }}</td>
+											<td class="py-3 border-b border-gray-300">{{ $proveedor->id_comp }}</td>
 
-                                            <td>
+                                            <td class="py-3 border-b border-gray-300">
                                                 <form action="{{ route('proveedor.destroy',$proveedor->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('proveedors.show',$proveedor->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('proveedors.edit',$proveedor->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                    <a  href="{{ route('proveedor.show',$proveedor->id) }}" class="text-green-500 font-bold"><i class="fa fa-fw fa-eye"></i> Show</a>
+                                                    <a  href="{{ route('proveedor.edit',$proveedor->id) }}" class="text-blue-500 font-bold"><i class="fa fa-fw fa-edit"></i> Edit</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                                    <button type="submit" class="text-red-500 font-bold"><i class="fa fa-fw fa-trash"></i> Delete</button>
                                                 </form>
                                             </td>
                                         </tr>
