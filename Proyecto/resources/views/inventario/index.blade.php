@@ -26,7 +26,7 @@ Inventario
 
                 
                 @if ($message = Session::get('success'))
-                <div class="bg-green-500">
+                <div class="bg-green-100 border-t border-b border-green-500 text-green-700 px-4 py-3 mb-4 mx-3 lg:mx-20 flex justify-center">
                     <p>{{ $message }}</p>
                 </div>
                 @endif
@@ -52,10 +52,10 @@ Inventario
                                         Descripcion
                                     </th>
 
-                                    <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100  text-gray-600 tracking-wider"></th>
+                                    <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-gray-600 tracking-wider"></th>
                                 </tr>
                             </thead>
-                            <tbody class="border-black">
+                            <tbody>
                                 @foreach ($inventarios as $inventario)
                                 <tr class="hover:bg-gray-100">
                                     <td class="py-3 border-b border-gray-300">{{ ++$i }}</td>

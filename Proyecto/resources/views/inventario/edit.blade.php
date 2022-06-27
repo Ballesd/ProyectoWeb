@@ -1,31 +1,31 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Update Inventario
+Update Inventario
 @endsection
 
 @section('content')
-    <section class="content container-fluid">
-        <div class="">
-            <div class="col-md-12">
+<section class="bg-gray-200">
+    <div>
+        <div>
 
-                @includeif('partials.errors')
+            @includeif('partials.errors')
 
-                <div class="card card-default">
-                    <div class="card-header">
-                        <span class="card-title">Update Inventario</span>
-                    </div>
-                    <div class="card-body">
-                        <form method="POST" action="{{ route('inventario.update', $inventario->id) }}"  role="form" enctype="multipart/form-data">
-                            {{ method_field('PATCH') }}
-                            @csrf
+            <div>
+                <div class="py-5 flex justify-center">
+                    <span class="text-3xl font-bold">Actualizar Inventario</span>
+                </div>
+                <div class="flex justify-center px-5 md:px-44 lg:px-72">
+                    <form method="POST" action="{{ route('inventario.update', $inventario->id) }}" role="form" enctype="multipart/form-data" class="w-full">
+                        {{ method_field('PATCH') }}
+                        @csrf
 
-                            @include('inventario.form')
+                        @include('inventario.form')
 
-                        </form>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 @endsection
