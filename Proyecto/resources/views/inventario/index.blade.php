@@ -72,11 +72,11 @@ Inventario
 
                                     <td class="py-3 border-b border-gray-300">
                                         <form action="{{ route('inventario.destroy',$inventario->id) }}" method="POST">
-                                            <a href="{{ route('inventario.show',$inventario->id) }}" class="text-green-500 font-bold"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                            <a href="{{ route('inventario.edit',$inventario->id) }}" class="text-blue-500 font-bold"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                            <a href="{{ route('inventario.show',$inventario->id) }}" class="text-green-500 font-bold"><i class="fa fa-fw fa-eye"></i> Mostrar</a>
+                                            <a href="{{ route('inventario.edit',$inventario->id) }}" class="text-blue-500 font-bold"><i class="fa fa-fw fa-edit"></i> Editar</a>
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="text-red-500 font-bold"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                            <button type="submit" class="text-red-500 font-bold"><i class="fa fa-fw fa-trash"></i> Borrar</button>
                                         </form>
                                     </td>
                                 </tr>

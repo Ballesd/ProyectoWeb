@@ -83,7 +83,7 @@ Empleado
                                             <a href="{{ route('empleado.edit',$empleado->id) }}" class="text-blue-500 font-bold"><i class="fa fa-fw fa-edit"></i> Editar</a>
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="text-red-500 font-bold"><i class="fa fa-fw fa-trash"></i> Eliminar</button>
+                                            <button type="submit" class="text-red-500 font-bold"><i class="fa fa-fw fa-trash"></i> Borrar</button>
                                         </form>
                                     </td>
                                 </tr>
