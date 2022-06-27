@@ -17,7 +17,7 @@ Route::resource('compañia', App\Http\Controllers\CompañiaController::class);
 Route::resource('inventario', App\Http\Controllers\InventarioController::class);    
 Route::resource('produccion', App\Http\Controllers\ProduccionController::class);
 Route::get('dowload-pdf','App\Http\Controllers\ProveedorController@generar_pdf')->name('descargar-pdf');    
-
+Route::get('dowload-pdf','App\Http\Controllers\InventarioController@generar_pdf')->name('descargar-pdf');
 
 Route::get('/register', [RegisterController::class, 'create'])
     ->middleware('guest') 
