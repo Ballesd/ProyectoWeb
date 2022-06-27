@@ -12,7 +12,7 @@
 
 <body>
 
-    <nav class="bg-black text-white flex justify-between px-14 py-5 items-center sticky top-0">
+    <nav class="bg-black text-white flex justify-between px-14 py-5 items-center">
         <div class="text-xs lg:text-4xl space-x-3 lg:space-x-10">
             <a href="{{ url('admin') }}" class="hover:text-sky-500"><i class="fa-solid fa-house"></i></a>
             <a href="{{ url('admin') }}" class="hover:text-sky-500"><i class="fa-solid fa-chart-pie"></i></a>
