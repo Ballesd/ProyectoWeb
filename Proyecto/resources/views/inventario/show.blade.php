@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<section class="pl-5 py-8 bg-red-200">
+<section class="pl-5 py-8">
     <div>
         <div>
             <div class="space-y-5">
