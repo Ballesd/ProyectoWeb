@@ -17,15 +17,17 @@ Inventario
                         </span>
 
                         <div>
+                            <a href="{{ route('descargar-pdf') }}" data-placement="left">
+                               <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"><i class="fa-solid fa-download"></i> {{ __('Generar lista del inventario (PDF)') }}</button>
+                            </a>
+                        </div>
+
+                        <div>
                             <a href="{{ route('inventario.create') }}" data-placement="left">
                                 <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">{{ __('Crear Nuevo') }}</button>
                             </a>
                         </div>
-                        <div>
-                            <a href="{{ route('descargar-pdf') }}" data-placement="left">
-                                {{ __('Generar lista del inventario (PDF)') }}
-                            </a>
-                        </div>
+                        
                     </div>
                 </div>
 
@@ -70,11 +72,11 @@ Inventario
 
                                     <td class="py-3 border-b border-gray-300">
                                         <form action="{{ route('inventario.destroy',$inventario->id) }}" method="POST">
-                                            <a href="{{ route('inventario.show',$inventario->id) }}" class="text-green-500 font-bold"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                            <a href="{{ route('inventario.edit',$inventario->id) }}" class="text-blue-500 font-bold"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                            <a href="{{ route('inventario.show',$inventario->id) }}" class="text-green-500 font-bold"><i class="fa fa-fw fa-eye"></i> Mostrar</a>
+                                            <a href="{{ route('inventario.edit',$inventario->id) }}" class="text-blue-500 font-bold"><i class="fa fa-fw fa-edit"></i> Editar</a>
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="text-red-500 font-bold"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                            <button type="submit" class="text-red-500 font-bold"><i class="fa fa-fw fa-trash"></i> Borrar</button>
                                         </form>
                                     </td>
                                 </tr>

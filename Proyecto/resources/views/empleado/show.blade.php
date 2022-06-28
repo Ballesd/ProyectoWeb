@@ -1,53 +1,55 @@
 @extends('layouts.app')
 
 @section('template_title')
-    {{ $empleado->name ?? 'Show Empleado' }}
+{{ $empleado->name ?? 'Show Empleado' }}
 @endsection
 
 @section('content')
-    <section class="content container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="float-left">
-                            <span class="card-title">Empleado: </span>
-                        </div>
-                        <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('empleado.index') }}"> Volver</a>
-                        </div>
+<section class="pl-5 py-8">
+    <div>
+        <div>
+            <div class="space-y-5">
+                <div>
+                    <div>
+                        <span class="text-3xl font-bold">Información del Empleado: </span>
                     </div>
 
-                    <div class="card-body">
-                        
-                        <div class="form-group">
-                            <strong>Nombre:</strong>
-                            {{ $empleado->nombre }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Cedula:</strong>
-                            {{ $empleado->cedula }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Apellido:</strong>
-                            {{ $empleado->apellido }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Fecha Ingreso:</strong>
-                            {{ $empleado->fecha_ingreso }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Direccion:</strong>
-                            {{ $empleado->direccion }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Telefono:</strong>
-                            {{ $empleado->telefono }}
-                        </div>
+                </div>
 
+                <div class="space-y-5">
+
+                    <div>
+                        <strong>Nombre:</strong>
+                        {{ $empleado->nombre }}
                     </div>
+                    <div>
+                        <strong>Cedula:</strong>
+                        {{ $empleado->cedula }}
+                    </div>
+                    <div>
+                        <strong>Apellido:</strong>
+                        {{ $empleado->apellido }}
+                    </div>
+                    <div>
+                        <strong>Fecha Ingreso:</strong>
+                        {{ $empleado->fecha_ingreso }}
+                    </div>
+                    <div>
+                        <strong>Direccion:</strong>
+                        {{ $empleado->direccion }}
+                    </div>
+                    <div>
+                        <strong>Telefono:</strong>
+                        {{ $empleado->telefono }}
+                    </div>
+
+                </div>
+
+                <div>
+                    <a href="{{ route('empleado.index') }}"><button class="p-3 bg-red-500 hover:bg-red-600 rounded-lg text-white">Regresar</button></a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 @endsection
