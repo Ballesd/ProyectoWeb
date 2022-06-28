@@ -4,21 +4,27 @@
 
 @section('content')
 
+@if(auth()->check())
+
 <section class="p-5 lg:px-20 lg:py-10 bg-gray-200">
 
     <article class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 text-3xl gap-5 sm:gap-10 text-center">
-        <a href="">
-            <div class="h-60 rounded-2xl p-5 bg-white shadow-2xl flex flex-col hover:bg-sky-300">
-                <h1>Análisis de ventas</h1>
 
+        @if((auth()->user()->role) == 'Administrador')
+        <a href="{{ route('inventario.index') }}">
+            <div class="h-60 rounded-2xl p-5 bg-white shadow-2xl flex flex-col hover:bg-sky-300">
+                <h1>Gestión de Inventario</h1>
             </div>
         </a>
+        @endif
 
-        <a href="">
+        @if((auth()->user()->role) == 'Administrador')
+        <a href="{{ route('proveedor.index') }}">
             <div class="h-60 rounded-2xl p-5 bg-white shadow-2xl flex flex-col hover:bg-sky-300">
-                <h1>Gestión de proveedores</h1>
+                <h1>Gestión de Proveedores</h1>
             </div>
         </a>
+        @endif
 
         <a href="">
             <div class="h-60 grid grid-cols-2 grid-rows-2 gap-5 text-xl">
@@ -29,28 +35,26 @@
             </div>
         </a>
 
-        <a href="">
+        <a href="{{ route('empleado.index') }}">
             <div class="h-60 rounded-2xl p-5 bg-white shadow-2xl flex flex-col hover:bg-sky-300">
-                <h1>Gestión de inventario</h1>
+                <h1>Rcursos Humanos</h1>
             </div>
         </a>
-
-        <a href="">
-            <div class="h-60 rounded-2xl p-5 bg-white shadow-2xl flex flex-col hover:bg-sky-300">
-                <h1>Recursos Humanos</h1>
-            </div>
-        </a>
-
-        <a href="">
+       
+        @if((auth()->user()->role) == 'Administrador')
+        <a href="{{ route('produccion.index') }}">
             <div class="h-60 rounded-2xl p-5 bg-white shadow-2xl flex flex-col hover:bg-sky-300">
                 <h1>Gestión de producción</h1>
             </div>
         </a>
+        @endif
+
+    
     </article>
 
 
 </section>
-
+@endif
 
 
 @endsection
