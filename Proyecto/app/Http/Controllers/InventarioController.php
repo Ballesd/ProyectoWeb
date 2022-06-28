@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Inventario;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade as PDF;
 
 /**
  * Class InventarioController
@@ -105,5 +106,10 @@ class InventarioController extends Controller
 
         return redirect()->route('inventario.index')
             ->with('success', 'Inventario deleted successfully');
+    }
+    public function generar_pdf(){
+        $inventario = Inventario::all();
+        $pdf = PDF::loadview('inventario.generar_pdf',compact('inventario'));
+        return $pdf->download('inventario.pdf');
     }
 }

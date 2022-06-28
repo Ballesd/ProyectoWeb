@@ -51,20 +51,6 @@
 
 </section>
 
-<section>
 
-    <footer class="bg-black text-white text-xl flex flex-wrap justify-around text-center py-14">
-        <div>ERP</div>
-
-        <div>
-            <p>Info</p>
-        </div>
-
-        <div>
-            <p>Contacto</p>
-        </div>
-
-    </footer>
-</section>
 
 @endsection
