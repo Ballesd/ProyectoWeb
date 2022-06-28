@@ -5,7 +5,6 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\AdminController;
 
-
 Route::get('/', function () {
     return view('home');
 })->middleware('auth');
@@ -18,6 +17,8 @@ Route::resource('inventario', App\Http\Controllers\InventarioController::class);
 Route::resource('produccion', App\Http\Controllers\ProduccionController::class);
 Route::get('dowload-pdf','App\Http\Controllers\ProveedorController@generar_pdf')->name('descargar-pdf');    
 Route::get('dowload-pdf','App\Http\Controllers\InventarioController@generar_pdf')->name('descargar-pdf');
+Route::get('exportar-excel','App\Http\Controllers\EmpleadoController@descarga_excel')->name('descarga_excel');
+
 
 Route::get('/register', [RegisterController::class, 'create'])
     ->middleware('guest') 

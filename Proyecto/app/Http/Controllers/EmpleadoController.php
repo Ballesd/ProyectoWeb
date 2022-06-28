@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Empleado;
 use Illuminate\Http\Request;
+use App\Exports\EmpleadoExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 /**
  * Class EmpleadoController
@@ -105,5 +107,9 @@ class EmpleadoController extends Controller
 
         return redirect()->route('empleado.index')
             ->with('success', 'Empleado borrado correctamente.');
+    }
+    public function descarga_excel(){
+
+        return  Excel::download(new EmpleadoExport, 'empleado.xlsx');
     }
 }
