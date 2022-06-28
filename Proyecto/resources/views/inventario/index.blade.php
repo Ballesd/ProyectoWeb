@@ -19,7 +19,7 @@ Inventario
 
                             <div>
                                 <a href="{{ route('descargar-pdf') }}" data-placement="left">
-                                <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"><i class="fa-solid fa-download"></i> {{ __('Generar lista del inventario (PDF)') }}</button>
+                                    <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"><i class="fa-solid fa-download"></i> {{ __('Generar lista del inventario (PDF)') }}</button>
                                 </a>
                             </div>
 
