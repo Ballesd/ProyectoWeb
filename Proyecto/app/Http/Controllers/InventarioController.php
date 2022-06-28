@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Inventario;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Barryvdh\DomPDF\Facade as PDF;
 
 /**
@@ -49,7 +50,7 @@ class InventarioController extends Controller
         $inventario = Inventario::create($request->all());
 
         return redirect()->route('inventario.index')
-            ->with('success', 'Inventario created successfully.');
+            ->with('success', 'Inventario creado correctamente.');
     }
 
     /**
@@ -92,7 +93,7 @@ class InventarioController extends Controller
         $inventario->update($request->all());
 
         return redirect()->route('inventario.index')
-            ->with('success', 'Inventario updated successfully');
+            ->with('success', 'Inventario editado correctamente');
     }
 
     /**
@@ -105,7 +106,7 @@ class InventarioController extends Controller
         $inventario = Inventario::find($id)->delete();
 
         return redirect()->route('inventario.index')
-            ->with('success', 'Inventario deleted successfully');
+            ->with('success', 'Inventario borrado');
     }
     public function generar_pdf(){
         $inventario = Inventario::all();
