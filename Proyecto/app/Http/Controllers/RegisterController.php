@@ -27,13 +27,10 @@ class RegisterController extends Controller
         $usuarioCre->role = $request->Cargo;  
         $usuarioCre->apellido = $request->apellido;
         $usuarioCre->cedula = $request->cedula;
-        $usuarioCre->photo = $request->foto;
-/*      
-        $path = $request->file('foto')->getRealPath();    
-        $logo = file_get_contents($path);
-        $base64 = base64_encode($logo);
-        $usuarioCre->photo = $base64;
-        */
+
+        if($request->hasFile('photo')){
+            $usuarioCre['photo'] = $request->file('photo')->store('avatars');
+        }
         $usuarioCre->save();
         
     }

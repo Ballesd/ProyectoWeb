@@ -24,8 +24,8 @@ class Producto extends Migration
 
             $table->timestamps();
             
-            $table->foreign('id_inv')->references('id')->on('compañia');
-        });
+            $table->foreign('id_inv')->references('id')->on('compañias');
+        }); 
     }
 
     /**
