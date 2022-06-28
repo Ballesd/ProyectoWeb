@@ -50,7 +50,7 @@ class ProduccionController extends Controller
         $produccion = Produccion::create($request->all());
 
         return redirect()->route('produccion.index')
-            ->with('success', 'Produccion añadida.');
+            ->with('success', 'Producción añadida.');
     }
 
     /**
@@ -93,7 +93,7 @@ class ProduccionController extends Controller
         $produccion->update($request->all());
 
         return redirect()->route('produccion.index')
-            ->with('success', 'Produccion editada');
+            ->with('success', 'Producción editada');
     }
 
     /**
@@ -106,6 +106,6 @@ class ProduccionController extends Controller
         $produccion = Produccion::find($id)->delete();
 
         return redirect()->route('produccion.index')
-            ->with('success', 'Produccion borrada');
+            ->with('success', 'Producción borrada');
     }
 }
