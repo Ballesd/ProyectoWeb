@@ -5,18 +5,18 @@
 @endsection
 
 @section('content')
-    <section class="content container-fluid">
-        <div class="row">
-            <div class="col-md-12">
+    <section class="bg-gray-200">
+        <div>
+            <div>
 
                 @includeif('partials.errors')
 
-                <div class="card card-default">
-                    <div class="card-header">
-                        <span class="card-title">Ingresar Proveedor</span>
+                <div>
+                    <div class="py-5 flex justify-center">
+                        <span class="text-3xl font-bold">Ingresar Proveedor</span>
                     </div>
-                    <div class="card-body">
-                        <form method="POST" action="{{ route('proveedor.store') }}"  role="form" enctype="multipart/form-data">
+                    <div class="flex justify-center px-5 md:px-44 lg:px-72">
+                        <form method="POST" action="{{ route('proveedor.store') }}"  class="w-full" role="form" enctype="multipart/form-data">
                             @csrf
 
                             @include('proveedor.form')
