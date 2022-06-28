@@ -19,6 +19,6 @@
 
     </div>
     <div class="flex justify-center mt-10">
-        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Crear Item</button>
+        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Guardar Item</button>
     </div>
 </div>

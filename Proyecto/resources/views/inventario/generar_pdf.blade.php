@@ -15,9 +15,6 @@
                         <table class="table-auto w-full  ">
                             <thead>
                                 <tr>
-                                    <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-gray-600 tracking-wider">
-                                        No
-                                    </th>
 
                                     <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-gray-600 tracking-wider">
                                         Cantidad
