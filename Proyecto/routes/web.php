@@ -10,11 +10,11 @@ Route::get('/', function () {
 })->middleware('auth');
 
 
-Route::resource('empleado', App\Http\Controllers\EmpleadoController::class);
-Route::resource('proveedor', App\Http\Controllers\ProveedorController::class);
-Route::resource('compañia', App\Http\Controllers\CompañiaController::class);    
-Route::resource('inventario', App\Http\Controllers\InventarioController::class);    
-Route::resource('produccion', App\Http\Controllers\ProduccionController::class);
+Route::resource('empleado', App\Http\Controllers\EmpleadoController::class)->middleware('auth');
+Route::resource('proveedor', App\Http\Controllers\ProveedorController::class)->middleware('auth.admin');
+Route::resource('compañia', App\Http\Controllers\CompañiaController::class)->middleware('auth.admin');    
+Route::resource('inventario', App\Http\Controllers\InventarioController::class)->middleware('auth.admin');    
+Route::resource('produccion', App\Http\Controllers\ProduccionController::class)->middleware('auth.admin');
 Route::get('dowload-pdf','App\Http\Controllers\ProveedorController@generar_pdf')->name('descargar-pdf');    
 Route::get('dowload-pdf','App\Http\Controllers\InventarioController@generar_pdf')->name('descargar-pdf');
 Route::get('exportar-excel','App\Http\Controllers\EmpleadoController@descarga_excel')->name('descarga_excel');
