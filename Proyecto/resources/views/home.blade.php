@@ -8,7 +8,7 @@
 
 <section class="p-5 lg:px-20 lg:py-10 bg-gray-200">
 
-    <article class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 text-3xl gap-5 sm:gap-10 text-center">
+    <article class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 text-3xl gap-5 sm:gap-10 text-center font-bold">
 
         @if((auth()->user()->role) == 'Administrador')
         <a href="{{ route('inventario.index') }}">
