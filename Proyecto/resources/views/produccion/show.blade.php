@@ -1,41 +1,43 @@
 @extends('layouts.app')
 
 @section('template_title')
-    {{ $produccion->name ?? 'Show Produccion' }}
+{{ $produccion->name ?? 'Show Produccion' }}
 @endsection
 
 @section('content')
-    <section class="content container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="float-left">
-                            <span class="card-title">Show Produccion</span>
-                        </div>
-                        <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('produccion.index') }}"> Back</a>
-                        </div>
+<section class="pl-5 py-8">
+    <div>
+        <div>
+            <div class="space-y-5"1>
+                <div>
+                    <div>
+                        <span class="text-3xl font-bold">Ver Producción</span>
                     </div>
 
-                    <div class="card-body">
-                        
-                        <div class="form-group">
-                            <strong>Cantidad:</strong>
-                            {{ $produccion->cantidad }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Horas Extra:</strong>
-                            {{ $produccion->horas_extra }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Id Empleado:</strong>
-                            {{ $produccion->id_empleado }}
-                        </div>
+                </div>
 
+                <div class="space-y-5">
+
+                    <div>
+                        <strong>Cantidad:</strong>
+                        {{ $produccion->cantidad }}
                     </div>
+                    <div>
+                        <strong>Horas Extra:</strong>
+                        {{ $produccion->horas_extra }}
+                    </div>
+                    <div>
+                        <strong>Id Empleado:</strong>
+                        {{ $produccion->id_empleado }}
+                    </div>
+
+                </div>
+
+                <div>
+                    <a href="{{ route('produccion.index') }}"><button class="p-3 bg-red-500 hover:bg-red-600 rounded-lg text-white">Regresar</button></a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 @endsection
