@@ -32,12 +32,12 @@
 
             </li>
             @else
-        
+
             <div class="flex justify-end gap-2 lg:gap-10 lg:h-auto">
                 <button class="bg-blue-500 hover:bg-blue-800 py-2 px-7 font-bold rounded-xl">
                     <a class="text-xs lg:text-lg" href="{{ route('login.index')  }}">Ingresar</a>
                 </button>
-            
+
 
                 <button class="bg-blue-500 hover:bg-blue-800 py-2 px-7 font-bold rounded-xl">
                     <a class="text-xs lg:text-lg" href="{{ route('register.index')  }}">Registrarse</a>
@@ -48,6 +48,21 @@
     </nav>
 
     @yield('content')
+
+    <section>
+        <footer class="bg-black text-white text-xl flex flex-wrap justify-around text-center py-14">
+            <div>ERP</div>
+
+            <div>
+                <p>Info</p>
+            </div>
+
+            <div>
+                <p>Contacto</p>
+            </div>
+
+        </footer>
+    </section>
 
 </body>
 
