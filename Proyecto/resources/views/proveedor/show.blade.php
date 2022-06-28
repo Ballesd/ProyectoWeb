@@ -5,47 +5,49 @@
 @endsection
 
 @section('content')
-    <section class="content container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="float-left">
-                            <span class="card-title">Mostrar Proveedor</span>
+    <section class="pl-5 py-8">
+        <div>
+            <div>
+                <div class="space-y-5">
+                    <div>
+                        <div>
+                            <span class="text-3xl font-bold">Mostrar Proveedor</span>
                         </div>
                         <div>
 
                         </div>
-                        <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('proveedor.index') }}"> Volver</a>
-                        </div>
+                        
                     </div>
 
-                    <div class="card-body">
+                    <div class="space-y-5">
                         
-                        <div class="form-group">
+                        <div>
 
                             <strong>Cédula:</strong>
                             {{ $proveedor->cedula }}
                         </div>
-                        <div class="form-group">
+                        <div>
                             <strong>Nombre:</strong>
                             {{ $proveedor->nombre }}
                         </div>
-                        <div class="form-group">
+                        <div>
                             <strong>Apellido:</strong>
                             {{ $proveedor->apellido }}
                         </div>
-                        <div class="form-group">
+                        <div>
                             <strong>Teléfono:</strong>
                             {{ $proveedor->telefono }}
                         </div>
-                        <div class="form-group">
+                        <div>
                             <strong>Id Compañia:</strong>
                             {{ $proveedor->id_comp }}
                         </div>
 
                     </div>
+
+                    <div>
+                            <a href="{{ route('proveedor.index') }}"><button class="p-3 bg-red-500 hover:bg-red-600 rounded-lg text-white">Regresar</button></a>
+                        </div>
                 </div>
             </div>
         </div>
