@@ -55,7 +55,7 @@
 
 
 
-    <section class="bg-black text-white grid grid-col-1 md:grid-cols-3 gap-y-7 text-center py-10">
+    <section class="bg-black text-white grid grid-col-1 md:grid-cols-3 gap-y-7 text-center py-20">
       <div class="flex justify-center items-center">
         <a href="/"><h1 class="text-5xl font-black">PBV</h1></a>
       </div>
