@@ -12,8 +12,11 @@
 
         @if((auth()->user()->role) == 'Administrador')
         <a href="{{ route('inventario.index') }}">
-            <div class="h-72 rounded-2xl p-5 bg-white shadow-2xl flex flex-col hover:bg-gradient-to-r hover:from-sky-200 hover:to-sky-500 hover:border border-black">
+            <div class="h-72 rounded-2xl p-5 bg-white shadow-2xl flex flex-col hover:bg-gradient-to-r hover:from-sky-200 hover:to-sky-500 hover:border border-black hover:animate-pulse">
                 <h1>Gestión de Inventario</h1>
+                <div class="flex justify-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2825/2825867.png" alt="imagen de proveedor" class="h-36">
+                </div>
             </div>
         </a>
         @endif
@@ -33,14 +36,20 @@
         <a href="{{ route('empleado.index') }}">
             <div class="h-72 rounded-2xl p-5 bg-white shadow-2xl flex flex-col hover:bg-gradient-to-r hover:from-sky-200 hover:to-sky-500 hover:border border-black">
                 <h1>Datos Abiertos</h1>
+                <div class="flex justify-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1849/1849554.png" alt="imagen de Datos abiertsos" class="h-36">
+                </div>
             </div>
         </a>
 
-        
+
 
         <a href="{{ route('empleado.index') }}">
             <div class="h-72 rounded-2xl p-5 bg-white shadow-2xl flex flex-col hover:bg-gradient-to-r hover:from-sky-200 hover:to-sky-500 hover:border border-black">
                 <h1>Recursos Humanos</h1>
+                <div class="flex justify-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/912/912267.png" alt="imagen de Recursos Humanos" class="h-36">
+                </div>
             </div>
         </a>
 
@@ -48,16 +57,30 @@
         <a href="{{ route('produccion.index') }}">
             <div class="h-72 rounded-2xl p-5 bg-white shadow-2xl flex flex-col hover:bg-gradient-to-r hover:from-sky-200 hover:to-sky-500 hover:border border-black">
                 <h1>Gestión de producción</h1>
+                <div class="flex justify-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/875/875312.png" alt="imagen de Producción" class="h-36">
+                </div>
             </div>
         </a>
         @endif
 
         <a href="">
             <div class="h-72 grid grid-cols-2 grid-rows-2 gap-5 text-xl">
-        
 
-                <div class="col-span-2 row-span-1 lg:col-span-1 lg:row-span-2 rounded-2xl p-4 bg-white shadow-2xl flex flex-col hover:bg-gradient-to-r hover:from-sky-200 hover:to-sky-500 hover:border border-black">Más funciones</div>
-                <div class="col-span-2 row-span-1 lg:col-span-1 lg:row-span-2 rounded-2xl p-4 bg-white shadow-2xl flex flex-col hover:bg-gradient-to-r hover:from-sky-200 hover:to-sky-500 hover:border border-black">Atención al cliente</div>
+
+                <div class="col-span-2 row-span-1 lg:col-span-1 lg:row-span-2 rounded-2xl p-4 bg-white shadow-2xl flex flex-col hover:bg-gradient-to-r hover:from-sky-200 hover:to-sky-500 hover:border border-black">
+                    <h1>Más funciones</h1>
+                    <div class="flex justify-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828921.png" alt="Imagen de más" class="w-24">
+                    </div>
+                </div>
+
+                <div class="col-span-2 row-span-1 lg:col-span-1 lg:row-span-2 rounded-2xl p-4 bg-white shadow-2xl flex flex-col hover:bg-gradient-to-r hover:from-sky-200 hover:to-sky-500 hover:border border-black">
+                    <h1>Atención al cliente</h1>
+                    <div class="flex justify-center">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1605/1605350.png" alt="Imagen de Atención al cliente" class="w-24">
+                    </div>
+                </div>
             </div>
         </a>
 
