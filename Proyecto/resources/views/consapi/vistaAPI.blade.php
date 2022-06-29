@@ -1,28 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
-    <script src="https://cdn.plot.ly/plotly-2.11.1.min.js"></script>
-    <title></title>
-</head>
-<body>
+@extends('layouts.app')
 
-    <section>
-        <div id = "api">
-            <button  onclick= "ConsumAPI()" >Patrimonio</button>
-            <button  onclick= "ConsumAPI2()" >Ingresos Operacionales</button>
-            <div id = "grafo"></div>
+@section('template_title')
+API
+@endsection
 
-            <div id = "grafo2"></div>
+@section('content')
+
+<section>
+
+    <section class="w-ful">
+        <div id="api" class="p-5 lg:px-44">
+            <div class="flex justify-around flex-wrap space-y-2 sm:space-y-0">
+                <button onclick="ConsumAPI()" class="bg-blue-500 hover:bg-gradient-to-r hover:from-sky-500 hover:to-sky-700 py-2 px-7 font-black rounded-xl shadow-xl text-white text-xl">
+                    Patrimonio
+                </button>
+
+                <button onclick="ConsumAPI2()" class="bg-blue-500 hover:bg-gradient-to-r hover:from-sky-500 hover:to-sky-700 py-2 px-7 font-black rounded-xl shadow-xl text-white text-xl">
+                    Ingresos Operacionales
+                </button>
+            </div>
+            <div id="grafo"></div>
+
+            <div id="grafo2"></div>
         </div>
     </section>
     <section>
         <div>
-              
+
         </div>
     </section>
-</body>
+</section>
 <script src="js/scriptAPI.js"></script>
-</html>
+
+@endsection

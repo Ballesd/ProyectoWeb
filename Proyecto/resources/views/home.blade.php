@@ -12,7 +12,7 @@
 
         @if((auth()->user()->role) == 'Administrador')
         <a href="{{ route('inventario.index') }}">
-            <div class="h-72 rounded-2xl p-5 bg-white shadow-2xl flex flex-col hover:bg-gradient-to-r hover:from-sky-200 hover:to-sky-500 hover:border border-black hover:animate-pulse">
+            <div class="h-72 rounded-2xl p-5 bg-white shadow-2xl flex flex-col hover:bg-gradient-to-r hover:from-sky-200 hover:to-sky-500 hover:border border-black">
                 <h1>Gestión de Inventario</h1>
                 <div class="flex justify-center items-center h-full">
                     <img src="https://cdn-icons-png.flaticon.com/512/2825/2825867.png" alt="imagen de proveedor" class="h-36">
@@ -33,7 +33,7 @@
         </a>
         @endif
 
-        <a href="{{ route('empleado.index') }}">
+        <a href="{{ url('API') }}">
             <div class="h-72 rounded-2xl p-5 bg-white shadow-2xl flex flex-col hover:bg-gradient-to-r hover:from-sky-200 hover:to-sky-500 hover:border border-black">
                 <h1>Datos Abiertos</h1>
                 <div class="flex justify-center items-center h-full">
@@ -68,7 +68,7 @@
             <div class="h-72 grid grid-cols-2 grid-rows-2 gap-5 text-xl">
 
 
-                <a href="https://cdn-icons-png.flaticon.com/512/1828/1828921.png" class="col-span-2 row-span-1 lg:col-span-1 lg:row-span-2">
+                <a href="#" class="col-span-2 row-span-1 lg:col-span-1 lg:row-span-2">
                     <div class="rounded-2xl p-4 bg-white shadow-2xl flex flex-col hover:bg-gradient-to-r hover:from-sky-200 hover:to-sky-500 hover:border border-black h-full">
                         <h1>Más funciones</h1>
                         <div class="flex justify-center items-center h-full">
@@ -77,7 +77,7 @@
                     </div>
                 </a>
 
-                <a href="https://cdn-icons-png.flaticon.com/512/1605/1605350.png" class="col-span-2 row-span-1 lg:col-span-1 lg:row-span-2 ">
+                <a href="#" class="col-span-2 row-span-1 lg:col-span-1 lg:row-span-2 ">
                     <div class="rounded-2xl p-4 bg-white shadow-2xl flex flex-col hover:bg-gradient-to-r hover:from-sky-200 hover:to-sky-500 hover:border border-black h-full">
                         <h1>Atención al cliente</h1>
                         <div class="flex justify-center items-center h-full">
