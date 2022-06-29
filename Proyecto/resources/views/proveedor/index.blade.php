@@ -10,7 +10,7 @@
             <div>
                 <div>
                     <div>
-                        <div class="flex justify-around py-5 mb-5">
+                        <div class="flex justify-around py-5 mb-5 flex-wrap space-y-2 sm:space-y-0">
 
                             <span class="text-4xl font-bold">
                                 {{ __('Proveedor') }}
