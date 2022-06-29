@@ -10,6 +10,7 @@ Route::get('/', function () {
 })->middleware('auth');
 
 
+Route::resource('API', App\Http\Controllers\ApiController::class)->middleware('auth');
 Route::resource('empleado', App\Http\Controllers\EmpleadoController::class)->middleware('auth');
 Route::resource('proveedor', App\Http\Controllers\ProveedorController::class)->middleware('auth.admin');
 Route::resource('compañia', App\Http\Controllers\CompañiaController::class)->middleware('auth.admin');    
