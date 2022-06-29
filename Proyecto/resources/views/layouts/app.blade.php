@@ -52,9 +52,9 @@
 
     @yield('content')
 
-    <section>
+   <!--  <section>
         <footer class="bg-black text-white text-xl flex flex-wrap justify-around text-center py-14">
-            <div>ERP</div>
+            <div class="bg-red-200">PBV</div>
 
             <div>
                 <p>Info</p>
@@ -65,6 +65,36 @@
             </div>
 
         </footer>
+    </section> -->
+
+    <section class="bg-black text-white grid grid-col-1 md:grid-cols-3 gap-y-5 text-center">
+      <div class="flex justify-center items-center">
+        <a href="/"></a>
+      </div>
+
+      <div class="font-light">
+      <a href="#" class="mr-4 hover:underline md:mr-6 lg:text-lg font-bold text-left lg:mr-96 flex flex-row hover:text-blue-700">Info:</a>
+            <a href="#" class="mr-4 hover:underline md:mr-6 lg:text-base lg:mr-44 flex flex-col hover:text-yellow-500">Danny Javier Vazques Cerón</a>
+            <a href="#" class="mr-4 hover:underline md:mr-6 lg:text-base lg:mr-44 flex flex-col hover:text-yellow-500">Juan Camilo Ballesteros Delgado</a>
+            <a href="#" class="mr-4 hover:underline md:mr-6 lg:text-base lg:mr-44 flex flex-col hover:text-yellow-500">Erik Palacio Castellanos</a>
+      </div>
+
+      <div class="pt-6">
+        <h1 class="font-bold">Social Media</h1>
+        <div class="flex justify-center gap-6 pt-4">
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-facebook-f fa-lg"></i>
+          </a>
+
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-instagram fa-lg"></i>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-linkedin fa-lg"></i>
+          </a>
+        </div>
+      </div>
+      
     </section>
 
 </body>
