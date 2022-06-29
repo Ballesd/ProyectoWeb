@@ -55,16 +55,17 @@
 
 
 
-    <section class="bg-black text-white grid grid-col-1 md:grid-cols-3 gap-y-5 text-center">
+    <section class="bg-black text-white grid grid-col-1 md:grid-cols-3 gap-y-7 text-center py-10">
       <div class="flex justify-center items-center">
-        <a href="/"></a>
+        <a href="/"><h1 class="text-5xl font-black">PBV</h1></a>
       </div>
 
-      <div class="font-light">
-      <a href="#" class="mr-4 hover:underline md:mr-6 lg:text-lg font-bold text-left lg:mr-96 flex flex-row hover:text-blue-700">Info:</a>
-            <a href="#" class="mr-4 hover:underline md:mr-6 lg:text-base lg:mr-44 flex flex-col hover:text-yellow-500">Danny Javier Vazques Cerón</a>
-            <a href="#" class="mr-4 hover:underline md:mr-6 lg:text-base lg:mr-44 flex flex-col hover:text-yellow-500">Juan Camilo Ballesteros Delgado</a>
-            <a href="#" class="mr-4 hover:underline md:mr-6 lg:text-base lg:mr-44 flex flex-col hover:text-yellow-500">Erik Palacio Castellanos</a>
+      <div class="font-light flex flex-col">
+            <h1 class="font-bold">Colaboradores</h1>
+            <br>
+            <p>Danny Javier Vazques Cerón</p>
+            <p>Juan Camilo Ballesteros Delgado</p>
+            <p>Erik Palacio Castellanos</p>
       </div>
 
       <div class="pt-6">
