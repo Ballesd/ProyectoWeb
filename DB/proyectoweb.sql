@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-06-2022 a las 05:50:03
+-- Tiempo de generación: 29-06-2022 a las 04:16:53
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -70,7 +70,8 @@ CREATE TABLE `empleados` (
 INSERT INTO `empleados` (`id`, `nombre`, `cedula`, `apellido`, `fecha_ingreso`, `direccion`, `telefono`, `created_at`, `updated_at`) VALUES
 (1, 'empleado', '3456', 'vreve', '2022-06-03', 'cra 25 call 21', '2345', '2022-06-26 07:55:10', '2022-06-26 07:55:10'),
 (2, 'Empleado 2', '3456', 'brt', '2011-07-01', 'ver41', '87654', '2022-06-26 07:55:32', '2022-06-26 07:55:32'),
-(3, 'btrbr4', '1234', 'revw', '2012-06-07', 'rt5', '45', '2022-06-26 07:55:50', '2022-06-26 07:55:50');
+(3, 'btrbr4', '1234', 'revw', '2012-06-07', 'rt5', '45', '2022-06-26 07:55:50', '2022-06-26 07:55:50'),
+(4, 'testing1', '35437645', 'alfred', '2012-05-10', 'cew4', '543534', '2022-06-28 20:37:43', '2022-06-28 20:37:43');
 
 -- --------------------------------------------------------
 
@@ -97,11 +98,21 @@ CREATE TABLE `failed_jobs` (
 CREATE TABLE `inventario` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `cantidad` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `precio` double(8,2) NOT NULL,
+  `precio` float NOT NULL,
   `descripcion` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `inventario`
+--
+
+INSERT INTO `inventario` (`id`, `cantidad`, `precio`, `descripcion`, `created_at`, `updated_at`) VALUES
+(1, '243243', 64354, 'wefwef', '2022-06-26 19:48:09', '2022-06-28 06:51:57'),
+(2, '21321', 432423, 'ververvre', '2022-06-28 06:48:03', '2022-06-28 06:48:03'),
+(3, '423423', 24323, 'verrebve fec3vr4er', '2022-06-28 06:53:58', '2022-06-28 06:53:58'),
+(4, '322', 213213000000000, 'vfver tbrtv trvrtv tv', '2022-06-28 06:57:19', '2022-06-28 06:57:19');
 
 -- --------------------------------------------------------
 
@@ -235,7 +246,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `role`, `apellido`, `cedula`, `photo`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'juan', 'gfd@ge', NULL, '$2y$10$J5H5JySjCbz9RqI7Q82wVO5yH2OnB88Yl2WS1ewb0SsRTiJEPj.0O', 'Administrador', 'el pibe', '5672', 'avatars/0dsaB9X617GfI8oSN60nNAZMt7xrq7u0e0vlgkhF.jpg', NULL, '2022-06-26 05:22:35', '2022-06-26 05:22:35');
+(1, 'juan', 'gfd@ge', NULL, '$2y$10$J5H5JySjCbz9RqI7Q82wVO5yH2OnB88Yl2WS1ewb0SsRTiJEPj.0O', 'Administrador', 'el pibe', '5672', 'avatars/0dsaB9X617GfI8oSN60nNAZMt7xrq7u0e0vlgkhF.jpg', NULL, '2022-06-26 05:22:35', '2022-06-26 05:22:35'),
+(2, 'OtrUsus', 'otro@otro', NULL, '$2y$10$.0Tu5AsLfqsjmpRpxt0oUejUUIO.aHbIPKp8WX/9x5qt3AjJGJgfy', 'Usuario', 'Apellido usus', '632398', 'avatars/oZAnn2zJTADBLelJTFXF7H4DkHIECr1Trtqthpu1.gif', NULL, '2022-06-26 23:59:47', '2022-06-26 23:59:47');
 
 --
 -- Índices para tablas volcadas
@@ -322,7 +334,7 @@ ALTER TABLE `compañias`
 -- AUTO_INCREMENT de la tabla `empleados`
 --
 ALTER TABLE `empleados`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `failed_jobs`
@@ -334,7 +346,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT de la tabla `inventario`
 --
 ALTER TABLE `inventario`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `migrations`
@@ -364,7 +376,7 @@ ALTER TABLE `proveedors`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Restricciones para tablas volcadas
