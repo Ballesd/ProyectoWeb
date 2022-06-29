@@ -17,7 +17,7 @@
                             </span>
 
                             <div class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-                                <a href="{{ route('descargar-pdf') }}" data-placement="left">
+                                <a href="{{ route('descargar_pdf') }}" data-placement="left">
                                <button>{{ __('Generar lista de proveedores (PDF)') }}</button>
                                 </a>
                             </div>

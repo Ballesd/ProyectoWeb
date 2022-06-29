@@ -16,7 +16,7 @@ Route::resource('proveedor', App\Http\Controllers\ProveedorController::class)->m
 Route::resource('compañia', App\Http\Controllers\CompañiaController::class)->middleware('auth.admin');    
 Route::resource('inventario', App\Http\Controllers\InventarioController::class)->middleware('auth.admin');    
 Route::resource('produccion', App\Http\Controllers\ProduccionController::class)->middleware('auth.admin');
-Route::get('dowload-pdf','App\Http\Controllers\ProveedorController@generar_pdf')->name('descargar-pdf');    
+Route::get('dowload_pdf','App\Http\Controllers\ProveedorController@generar_pdf')->name('descargar_pdf');    
 Route::get('dowload-pdf','App\Http\Controllers\InventarioController@generar_pdf')->name('descargar-pdf');
 Route::get('exportar-excel','App\Http\Controllers\EmpleadoController@descarga_excel')->name('descarga_excel');
 
