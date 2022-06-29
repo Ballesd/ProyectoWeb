@@ -12,7 +12,7 @@
 
         @if((auth()->user()->role) == 'Administrador')
         <a href="{{ route('inventario.index') }}">
-            <div class="h-72 rounded-2xl p-5 bg-white shadow-2xl flex flex-col hover:bg-gradient-to-r hover:from-sky-200 hover:to-sky-500 hover:border border-black hover:animate-pulse">
+            <div class="h-72 rounded-2xl p-5 bg-white shadow-2xl flex flex-col hover:bg-gradient-to-r hover:from-sky-200 hover:to-sky-500 hover:border border-black">
                 <h1>Gestión de Inventario</h1>
                 <div class="flex justify-center items-center h-full">
                     <img src="https://cdn-icons-png.flaticon.com/512/2825/2825867.png" alt="imagen de proveedor" class="h-36">
