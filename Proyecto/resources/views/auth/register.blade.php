@@ -4,8 +4,7 @@
 
 @section('content')
 
-<section class="px-5 md:px-44 lg:px-72 bg-gray-200">
-  <p class="pt-14 lg:pt-28"></p>
+<section class="p-5 md:px-44 lg:px-72 lg:py-28 bg-gray-200">
   <div class="bg-white p-10 rounded-2xl shadow-2xl">
     <h1 class="flex justify-center font-bold text-3xl">REGISTRARSE</h1>
     <form action="" enctype="multipart/form-data" method="POST" class="flex flex-col space-y-3 md:space-y-5">
@@ -32,7 +31,7 @@
       </div>
 
       @error('email')
-      <p>{{$message }}</p>
+      <p class="text-red-500 font-bold">{{$message }}</p>
       @enderror
       <div class="flex flex-col shadow-xl">
         <label for="" class="font-semibold">Correo:</label>
@@ -48,7 +47,7 @@
       </div>
 
       @error('password')
-      <p>{{$message }}</p>
+      <p class="text-red-500 font-bold">{{$message }}</p>
       @enderror
 
       <div class="flex flex-col shadow-xl">
@@ -62,11 +61,11 @@
       </div>
 
       <div class="flex justify-center font-bold">
-        <button class= "py-2 px-4 rounded-xl bg-green-500 hover:bg-green-600 shadow-xl">Registrarse</button>
+        <button class= "bg-blue-500 hover:bg-gradient-to-r hover:from-sky-500 hover:to-sky-700 py-2 px-7 font-black rounded-xl shadow-xl text-white text-xl">Registrarse</button>
       </div>
     </form>
   </div>
-  <p class="pt-52 lg:pt-80"></p>
+
 
 </section>
 @endsection

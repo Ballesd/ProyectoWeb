@@ -12,12 +12,14 @@
 
 <body>
 
-    <nav class="bg-black text-white flex justify-between px-14 py-5 items-center">
-        <div class="text-xs lg:text-4xl space-x-3 lg:space-x-10">
-            <a href="{{ url('/') }}" class="hover:text-sky-500"><i class="fa-solid fa-house"></i></a>
-            <a href="{{ url('/') }}" class="hover:text-sky-500"><i class="fa-solid fa-chart-pie"></i></a>
-            <a href="{{ url('/') }}" class="hover:text-sky-500"><i class="fa-solid fa-cart-flatbed-suitcase"></i></a>
-            <a href="{{ url('/') }}" class="hover:text-sky-500"><i class="fa-solid fa-circle-dollar-to-slot"></i></a>
+    <nav class="bg-black text-white flex justify-between px-5 sm:px-14 py-5 items-center">
+        <div class="text-3xl md:text-4xl space-x-3 md:space-x-10 flex flex-row">
+            <a href="{{ url('/') }}" class="hover:text-sky-500 flex"><i class="fa-solid fa-house"></i></a>
+            <a href="{{ url('/inventario') }}" class="hover:text-sky-500 hidden sm:flex"><i class="fa-solid fa-cart-flatbed-suitcase"></i></a>
+            <a href="{{ url('/proveedor') }}" class="hover:text-sky-500 hidden sm:flex"><i class="fa-solid fa-truck"></i></a>
+            <a href="{{ url('/') }}" class="hover:text-sky-500 hidden sm:flex"><i class="fa-solid fa-database"></i></a>
+            <a href="{{ url('/empleado') }}" class="hover:text-sky-500 hidden sm:flex"><i class="fa-solid fa-people-group"></i></a>
+            <a href="{{ url('/produccion') }}" class="hover:text-sky-500 hidden sm:flex"><i class="fa-solid fa-person-arrow-up-from-line"></i></a>
         </div>
 
         <ul>
@@ -34,14 +36,15 @@
             @else
 
             <div class="flex justify-end gap-2 lg:gap-10 lg:h-auto">
-                <button class="bg-blue-500 hover:bg-blue-800 py-2 px-7 font-bold rounded-xl">
-                    <a class="text-xs lg:text-lg" href="{{ route('login.index')  }}">Ingresar</a>
-                </button>
 
+                <a class="text-xs lg:text-lg" href="{{ route('login.index')  }}">
+                    <button class="bg-blue-500 hover:bg-blue-800 py-2 px-7 font-bold rounded-xl">Ingresar </button>
+                </a>
 
-                <button class="bg-blue-500 hover:bg-blue-800 py-2 px-7 font-bold rounded-xl">
-                    <a class="text-xs lg:text-lg" href="{{ route('register.index')  }}">Registrarse</a>
-                </button>
+                <a class="text-xs lg:text-lg" href="{{ route('register.index')  }}">
+                    <button class="bg-blue-500 hover:bg-blue-800 py-2 px-7 font-bold rounded-xl">Registrarse</button>
+                </a>
+
                 @endif
             </div>
         </ul>
