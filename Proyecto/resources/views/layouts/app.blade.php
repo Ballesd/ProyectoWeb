@@ -8,6 +8,7 @@
     <title>@yield('title') - laravel App</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/cfe1e1aa1c.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.plot.ly/plotly-2.11.1.min.js"></script>
 </head>
 
 <body>
@@ -17,7 +18,7 @@
             <a href="{{ url('/') }}" class="hover:text-sky-500 flex"><i class="fa-solid fa-house"></i></a>
             <a href="{{ url('/inventario') }}" class="hover:text-sky-500 hidden sm:flex"><i class="fa-solid fa-cart-flatbed-suitcase"></i></a>
             <a href="{{ url('/proveedor') }}" class="hover:text-sky-500 hidden sm:flex"><i class="fa-solid fa-truck"></i></a>
-            <a href="{{ url('/') }}" class="hover:text-sky-500 hidden sm:flex"><i class="fa-solid fa-database"></i></a>
+            <a href="{{ url('/API') }}" class="hover:text-sky-500 hidden sm:flex"><i class="fa-solid fa-database"></i></a>
             <a href="{{ url('/empleado') }}" class="hover:text-sky-500 hidden sm:flex"><i class="fa-solid fa-people-group"></i></a>
             <a href="{{ url('/produccion') }}" class="hover:text-sky-500 hidden sm:flex"><i class="fa-solid fa-person-arrow-up-from-line"></i></a>
         </div>
