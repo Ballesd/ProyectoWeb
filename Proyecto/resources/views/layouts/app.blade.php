@@ -53,20 +53,7 @@
 
     @yield('content')
 
-   <!--  <section>
-        <footer class="bg-black text-white text-xl flex flex-wrap justify-around text-center py-14">
-            <div class="bg-red-200">PBV</div>
 
-            <div>
-                <p>Info</p>
-            </div>
-
-            <div>
-                <p>Contacto</p>
-            </div>
-
-        </footer>
-    </section> -->
 
     <section class="bg-black text-white grid grid-col-1 md:grid-cols-3 gap-y-5 text-center">
       <div class="flex justify-center items-center">
