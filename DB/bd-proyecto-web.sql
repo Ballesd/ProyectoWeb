@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-06-2022 a las 09:10:03
+-- Tiempo de generación: 29-06-2022 a las 17:12:28
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -73,6 +73,27 @@ CREATE TABLE `empleados` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `empleados`
+--
+
+INSERT INTO `empleados` (`id`, `nombre`, `cedula`, `apellido`, `fecha_ingreso`, `direccion`, `telefono`, `created_at`, `updated_at`) VALUES
+(1, 'Jorge', '31223228', 'Perez', '2010-06-17', 'Calle 10 No. 9 - 78 Centro', '3148980983', '2022-06-29 12:44:26', '2022-06-29 12:44:26'),
+(2, 'Manuela', '4773058', 'Gonzáles', '2012-03-15', 'Carrera 56A No. 51 - 81', '3206757908', '2022-06-29 12:45:30', '2022-06-29 12:45:30'),
+(3, 'Carlos', '25559177', 'Alzate', '2008-10-23', 'Carrera 22 No. 17-31', '3226899750', '2022-06-29 12:46:33', '2022-06-29 12:46:33'),
+(4, 'Sofia', '34542749', 'Colorado', '2011-08-06', 'Carrera 54 No. 68 - 80 Barrio el Prado', '3145761235', '2022-06-29 12:47:36', '2022-06-29 12:47:36'),
+(5, 'Elissa', '34530532', 'Ruiz', '2019-09-18', 'Calle 59 No. 27 - 35 Barrio Galán', '3205751236', '2022-06-29 12:48:32', '2022-06-29 12:48:32'),
+(6, 'Natalia', '14877481', 'Hurtado', '2007-03-09', 'Carrera 10A No. 20 - 40 Edificio El Clarín piso 3 Centro La Matuna', '3190986534', '2022-06-29 12:49:26', '2022-06-29 12:49:26'),
+(7, 'Valeria', '25611423', 'Giraldo', '2016-07-10', 'Carrera 8 No. 20 - 59', '3210877799', '2022-06-29 12:50:21', '2022-06-29 12:50:21'),
+(8, 'Camila', '34551673', 'Torres', '2015-03-25', 'Calle 20 No. 22 - 27 piso 3 Edificio Cumanday', '3137302822', '2022-06-29 12:51:24', '2022-06-29 12:51:24'),
+(9, 'Maria Fernanda', '31266482', 'Casas', '2022-02-20', 'Carrera 8a No. 7 - 88 /94 Barrio La Estrella', '3220980457', '2022-06-29 12:52:19', '2022-06-29 12:52:19'),
+(10, 'Mateo', '10544662', 'Hernandez', '2016-04-08', 'Carrera 5 No. 3 -74 centro', '3134567643', '2022-06-29 12:53:18', '2022-06-29 12:53:18'),
+(11, 'David', '34562400', 'Ocampo', '2010-02-25', 'Calle 15 No. 9 - 56 centro', '3168899876', '2022-06-29 12:54:47', '2022-06-29 12:54:47'),
+(12, 'Camilo', '10521362', 'Buitrago', '2009-08-02', 'Calle 25 No. 4 - 38 piso 2 Barrio Pandeyuca', '3212045764', '2022-06-29 12:55:39', '2022-06-29 12:55:39'),
+(13, 'Miguel', '10517940', 'Martinez', '2017-06-05', 'Calle 28 No. 8 - 69 CENTRO', '3137223346', '2022-06-29 12:56:31', '2022-06-29 12:56:31'),
+(14, 'Sofia', '66923034', 'Jaramillo', '2010-10-10', 'Carrera 7A No. 32 - 63 piso 2', '3124658907', '2022-06-29 12:57:21', '2022-06-29 12:57:21'),
+(15, 'Fredy', '76307516', 'Palacio', '2021-04-09', 'Calle 7 No. 5 - 25 Edificio Segunda', '3205751239', '2022-06-29 12:58:12', '2022-06-29 12:58:12');
 
 -- --------------------------------------------------------
 
@@ -184,6 +205,27 @@ CREATE TABLE `produccions` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `produccions`
+--
+
+INSERT INTO `produccions` (`id`, `cantidad`, `horas_extra`, `id_empleado`, `created_at`, `updated_at`) VALUES
+(1, 25, '2.00', 7, '2022-06-29 12:59:03', '2022-06-29 12:59:03'),
+(2, 50, '4.00', 6, '2022-06-29 12:59:55', '2022-06-29 12:59:55'),
+(3, 120, '8.00', 1, '2022-06-29 13:00:39', '2022-06-29 13:00:39'),
+(4, 100, '6.00', 2, '2022-06-29 13:01:16', '2022-06-29 13:01:16'),
+(5, 300, '14.00', 3, '2022-06-29 13:01:43', '2022-06-29 13:01:43'),
+(6, 30, '2.00', 12, '2022-06-29 13:02:40', '2022-06-29 13:02:40'),
+(7, 210, '11.00', 13, '2022-06-29 13:03:11', '2022-06-29 13:03:11'),
+(8, 40, '3.00', 4, '2022-06-29 13:03:50', '2022-06-29 13:03:50'),
+(9, 98, '7.00', 5, '2022-06-29 13:04:37', '2022-06-29 13:04:37'),
+(10, 35, '3.00', 8, '2022-06-29 13:05:02', '2022-06-29 13:05:02'),
+(11, 60, '5.00', 9, '2022-06-29 13:05:54', '2022-06-29 13:05:54'),
+(12, 450, '17.00', 15, '2022-06-29 13:06:31', '2022-06-29 13:06:31'),
+(13, 35, '3.00', 10, '2022-06-29 13:07:06', '2022-06-29 13:07:06'),
+(14, 110, '9.00', 11, '2022-06-29 13:07:45', '2022-06-29 13:07:45'),
+(15, 50, '4.00', 14, '2022-06-29 13:08:17', '2022-06-29 13:08:17');
 
 -- --------------------------------------------------------
 
@@ -352,7 +394,7 @@ ALTER TABLE `compañias`
 -- AUTO_INCREMENT de la tabla `empleados`
 --
 ALTER TABLE `empleados`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `failed_jobs`
@@ -376,7 +418,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT de la tabla `produccions`
 --
 ALTER TABLE `produccions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `producto`
